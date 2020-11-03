@@ -50,6 +50,7 @@
                                                 <input type="checkbox" class="select_all">
                                             </th>
                                         @endif
+                                        {{print($dataType->browseRows)}}
                                         @foreach($dataType->browseRows as $row)
                                             <th>
                                                 @if ($isServerSide && $row->type !== 'relationship')
