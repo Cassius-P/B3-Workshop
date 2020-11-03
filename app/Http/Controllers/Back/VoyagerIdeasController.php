@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Back;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\Back\VoyagerBreadController as BaseVoyagerBreadController;
 
 
 class VoyagerIdeasController extends VoyagerBreadController
