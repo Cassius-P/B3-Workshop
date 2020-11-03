@@ -30,6 +30,6 @@ class IdeasController extends Controller
             $affichage[$category.title] = $ideas;
         }
 
-        return view('', ['affichage'=>$affichage]);
+        return view('yann', ['affichage'=>$affichage]);
     }
 }
