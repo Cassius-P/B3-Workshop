@@ -13,6 +13,7 @@ yarn-error.log
 /config/app.php
 /index.php
 
+hooks/hooks.json
 .vscode/launch.json
 
 debug.log
