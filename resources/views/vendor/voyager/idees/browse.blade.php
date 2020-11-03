@@ -2,7 +2,7 @@
 
 @section('page_title', __('voyager::generic.viewing').' '.$dataType->getTranslatedAttribute('display_name_plural'))
 
-@if(\Illuminate\Support\Facades\Auth::user()->role_id == 3)
+@if(Auth::user()->role_id == 3)
     @section('content')
         <div class="page-content browse container-fluid">
             @include('voyager::alerts')
@@ -10,6 +10,7 @@
                 <div class="col-md-12">
                     <div class="panel panel-bordered">
                         <div class="panel-body">
+                            yeeeet
                             @if ($isServerSide)
                                 <form method="get" class="form-search">
                                     <div id="search-input">
