@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Back\VoyagerBreadController as BaseVoyagerBreadController;
 
 
-class VoyagerIdeasController extends VoyagerBreadController
+class IdeesController extends VoyagerBreadController
 {
     public function index(Request $request){
         $slug = $this->getSlug($request);
