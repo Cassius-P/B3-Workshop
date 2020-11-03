@@ -36,6 +36,6 @@ class IdeesController extends VoyagerBreadController
         ));
     }*/
     public function index(){
-
+        return view('vendor/voyager/idees/browse');
     }
 }
