@@ -50,11 +50,9 @@
                                                 <input type="checkbox" class="select_all">
                                             </th>
                                         @endif
-                                        {{print($dataType->browseRows)}}
 
                                             <?php
                                                 $row = $dataType->browseRows;
-
                                             ?>
                                             <th>
                                                 @if ($isServerSide && $row[2]->type !== 'relationship')
@@ -174,6 +172,7 @@
                                     </tr>
                                     </thead>
                                     <tbody>
+                                    {{print($dataTypeContent)}}
                                     @foreach($dataTypeContent as $data)
                                         <tr>
                                             @if($showCheckboxColumn)
