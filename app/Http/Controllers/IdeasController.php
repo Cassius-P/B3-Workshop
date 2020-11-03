@@ -19,7 +19,7 @@ class IdeasController extends Controller
         $affichage = array();
         foreach ($categories as $category){
             $id=$category->id;
-            $ideas= DB::table('categories_idea')->where('categories_idea.categories_id', '=', $id)->join('idees', 'categories_idea.ideas_id', '=', 'idees.id')->join(
+            /*$ideas= DB::table('categories_idea')->where('categories_idea.categories_id', '=', $id)->join('idees', 'categories_idea.ideas_id', '=', 'idees.id')->join(
                 'users', 'idees.user_id', '=', 'users.id')->where('idees.statut', '=', 1)->select(
                     'idees.id',
                     'idees.title',
@@ -28,8 +28,8 @@ class IdeasController extends Controller
                     'idees.category_id',
                     'idees.statut',
                     'idees.upvotes',
-                    'users.name')->get();
-            $affichage = $ideas;
+                    'users.name')->get();*/
+            $affichage = 'yyet';
         }
 
         return view('yann', [ 'affichage' => $affichage]);
