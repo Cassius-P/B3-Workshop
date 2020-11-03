@@ -60,7 +60,7 @@
                                                 @if ($isServerSide && $row[2]->type !== 'relationship')
                                                     <a href="{{ $row[2]->sortByUrl($orderBy, $sortOrder) }}">
                                                         @endif
-                                                        {{ $row[2]->getTranslatedAttribute('display_name') }}
+                                                        Date de création
                                                         @if ($isServerSide)
                                                             @if ($row[2]->isCurrentSortField($orderBy))
                                                                 @if ($sortOrder == 'asc')
@@ -76,7 +76,7 @@
                                                 @if ($isServerSide && $row[0]->type !== 'relationship')
                                                     <a href="{{ $row[0]->sortByUrl($orderBy, $sortOrder) }}">
                                                         @endif
-                                                        {{ $row[0]->getTranslatedAttribute('display_name') }}
+                                                        Titre
                                                         @if ($isServerSide)
                                                             @if ($row[0]->isCurrentSortField($orderBy))
                                                                 @if ($sortOrder == 'asc')
@@ -92,7 +92,7 @@
                                                 @if ($isServerSide && $row[1]->type !== 'relationship')
                                                     <a href="{{ $row[1]->sortByUrl($orderBy, $sortOrder) }}">
                                                         @endif
-                                                        {{ $row[1]->getTranslatedAttribute('display_name') }}
+                                                        Description
                                                         @if ($isServerSide)
                                                             @if ($row[1]->isCurrentSortField($orderBy))
                                                                 @if ($sortOrder == 'asc')
@@ -108,7 +108,7 @@
                                                 @if ($isServerSide && $row[4]->type !== 'relationship')
                                                     <a href="{{ $row[4]->sortByUrl($orderBy, $sortOrder) }}">
                                                         @endif
-                                                        {{ $row[4]->getTranslatedAttribute('display_name') }}
+                                                        Catégories
                                                         @if ($isServerSide)
                                                             @if ($row[4]->isCurrentSortField($orderBy))
                                                                 @if ($sortOrder == 'asc')
@@ -124,7 +124,7 @@
                                                 @if ($isServerSide && $row[5]->type !== 'relationship')
                                                     <a href="{{ $row[5]->sortByUrl($orderBy, $sortOrder) }}">
                                                         @endif
-                                                        {{ $row[5]->getTranslatedAttribute('display_name') }}
+                                                        Créateur
                                                         @if ($isServerSide)
                                                             @if ($row[5]->isCurrentSortField($orderBy))
                                                                 @if ($sortOrder == 'asc')
@@ -140,7 +140,7 @@
                                                 @if ($isServerSide && $row[3]->type !== 'relationship')
                                                     <a href="{{ $row[3]->sortByUrl($orderBy, $sortOrder) }}">
                                                         @endif
-                                                        {{ $row[3]->getTranslatedAttribute('display_name') }}
+                                                        Statut
                                                         @if ($isServerSide)
                                                             @if ($row[3]->isCurrentSortField($orderBy))
                                                                 @if ($sortOrder == 'asc')
