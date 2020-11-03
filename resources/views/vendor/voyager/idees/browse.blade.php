@@ -189,8 +189,12 @@
                                                     if ($data->{$row[5]->field.'_browse'}) {
                                                         $data->{$row[5]->field} = $data->{$row[5]->field.'_browse'};
                                                     }
+
                                                 @endphp
-                                                @include('voyager::formfields.relationship', ['view' => 'browse','options' => $row[5]->details])
+                                                @if($row->type == 'relationship')
+                                                    @include('voyager::formfields.relationship', ['view' => 'browse','options' => $row->details])
+                                                @endif
+
                                             </td>
                                             <td>
                                                 {{$data->created_at}}
@@ -198,7 +202,7 @@
                                             <td>
                                                 {{$data->created_at}}
                                             </td>
-                                            {{--@foreach($dataType->browseRows as $row)
+                                            @foreach($dataType->browseRows as $row)
                                                 @php
                                                     if ($data->{$row->field.'_browse'}) {
                                                         $data->{$row->field} = $data->{$row->field.'_browse'};
@@ -335,7 +339,7 @@
                                                         <span>{{ $data->{$row->field} }}</span>
                                                     @endif
                                                 </td>
-                                            @endforeach--}}
+                                            @endforeach
                                             <td class="no-sort no-click bread-actions">
                                                 @foreach($actions as $action)
                                                     @if (!method_exists($action, 'massAction'))
