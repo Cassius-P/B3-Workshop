@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\DB;
 
 class CategoriesController extends Controller{
     public function index($url){
-        $category = Categories::where('slug', '=', $url);
+        $category = Categories::where('slug', '=', $url)->first();
         if($category == null){
             abort(404);
             return false;
