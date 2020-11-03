@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Ideas;
+use App\Models\Categories;
 use App\Models\CategoriesIdea;
+use Illuminate\Support\Facades\DB;
 
 class IdeasController extends Controller
 {
