@@ -11,8 +11,8 @@ use Illuminate\Support\Facades\DB;
 
 class CategoriesController extends Controller{
     public function index($url){
-        $category = Categories::where('slug', '=', $url);
-        if($category===NULL){
+        $category = Categories::where('slug', '=', $url)->first();
+        if($category == null){
             abort(404);
             return false;
         }else{
@@ -24,11 +24,10 @@ class CategoriesController extends Controller{
             )->first();
 
             $ideas = DB::table('idees')->join('categories',
-                'categories.id',
+                'idees.category_id',
                 '=',
-                'idees.category_id'
+                'categories.id'
             )->where('categories.id','=',$category->id
-            )->where('idees.statut','=',1
             )->select('idees.*')->get();
 
             foreach($ideas as $idea){
