@@ -5,7 +5,7 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    {{print($affichage)}}
+                    {{json_encode($affichage)}}
                 </div>
             </div>
         </div>
