@@ -50,107 +50,7 @@
                                                 <input type="checkbox" class="select_all">
                                             </th>
                                         @endif
-
-                                            <?php
-                                                $row = $dataType->browseRows;
-                                            ?>
-                                            <th>
-                                                @if ($isServerSide && $row[2]->type !== 'relationship')
-                                                    <a href="{{ $row[2]->sortByUrl($orderBy, $sortOrder) }}">
-                                                        @endif
-                                                        Date de création
-                                                        @if ($isServerSide)
-                                                            @if ($row[2]->isCurrentSortField($orderBy))
-                                                                @if ($sortOrder == 'asc')
-                                                                    <i class="voyager-angle-up pull-right"></i>
-                                                                @else
-                                                                    <i class="voyager-angle-down pull-right"></i>
-                                                                @endif
-                                                            @endif
-                                                    </a>
-                                                @endif
-                                            </th>
-                                            <th>
-                                                @if ($isServerSide && $row[0]->type !== 'relationship')
-                                                    <a href="{{ $row[0]->sortByUrl($orderBy, $sortOrder) }}">
-                                                        @endif
-                                                        Titre
-                                                        @if ($isServerSide)
-                                                            @if ($row[0]->isCurrentSortField($orderBy))
-                                                                @if ($sortOrder == 'asc')
-                                                                    <i class="voyager-angle-up pull-right"></i>
-                                                                @else
-                                                                    <i class="voyager-angle-down pull-right"></i>
-                                                                @endif
-                                                            @endif
-                                                    </a>
-                                                @endif
-                                            </th>
-                                            <th>
-                                                @if ($isServerSide && $row[1]->type !== 'relationship')
-                                                    <a href="{{ $row[1]->sortByUrl($orderBy, $sortOrder) }}">
-                                                        @endif
-                                                        Description
-                                                        @if ($isServerSide)
-                                                            @if ($row[1]->isCurrentSortField($orderBy))
-                                                                @if ($sortOrder == 'asc')
-                                                                    <i class="voyager-angle-up pull-right"></i>
-                                                                @else
-                                                                    <i class="voyager-angle-down pull-right"></i>
-                                                                @endif
-                                                            @endif
-                                                    </a>
-                                                @endif
-                                            </th>
-                                            <th>
-                                                @if ($isServerSide && $row[4]->type !== 'relationship')
-                                                    <a href="{{ $row[4]->sortByUrl($orderBy, $sortOrder) }}">
-                                                        @endif
-                                                        Catégories
-                                                        @if ($isServerSide)
-                                                            @if ($row[4]->isCurrentSortField($orderBy))
-                                                                @if ($sortOrder == 'asc')
-                                                                    <i class="voyager-angle-up pull-right"></i>
-                                                                @else
-                                                                    <i class="voyager-angle-down pull-right"></i>
-                                                                @endif
-                                                            @endif
-                                                    </a>
-                                                @endif
-                                            </th>
-                                            <th>
-                                                @if ($isServerSide && $row[5]->type !== 'relationship')
-                                                    <a href="{{ $row[5]->sortByUrl($orderBy, $sortOrder) }}">
-                                                        @endif
-                                                        Créateur
-                                                        @if ($isServerSide)
-                                                            @if ($row[5]->isCurrentSortField($orderBy))
-                                                                @if ($sortOrder == 'asc')
-                                                                    <i class="voyager-angle-up pull-right"></i>
-                                                                @else
-                                                                    <i class="voyager-angle-down pull-right"></i>
-                                                                @endif
-                                                            @endif
-                                                    </a>
-                                                @endif
-                                            </th>
-                                            <th>
-                                                @if ($isServerSide && $row[3]->type !== 'relationship')
-                                                    <a href="{{ $row[3]->sortByUrl($orderBy, $sortOrder) }}">
-                                                        @endif
-                                                        Statut
-                                                        @if ($isServerSide)
-                                                            @if ($row[3]->isCurrentSortField($orderBy))
-                                                                @if ($sortOrder == 'asc')
-                                                                    <i class="voyager-angle-up pull-right"></i>
-                                                                @else
-                                                                    <i class="voyager-angle-down pull-right"></i>
-                                                                @endif
-                                                            @endif
-                                                    </a>
-                                                @endif
-                                            </th>
-                                        {{--@foreach($dataType->browseRows as $row)
+                                        @foreach($dataType->browseRows as $row)
                                             <th>
                                                 @if ($isServerSide && $row->type !== 'relationship')
                                                     <a href="{{ $row->sortByUrl($orderBy, $sortOrder) }}">
@@ -167,12 +67,11 @@
                                                     </a>
                                                 @endif
                                             </th>
-                                        @endforeach--}}
+                                        @endforeach
                                         <th class="actions text-right dt-not-orderable">{{ __('voyager::generic.actions') }}</th>
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    {{print($dataTypeContent)}}
                                     @foreach($dataTypeContent as $data)
                                         <tr>
                                             @if($showCheckboxColumn)
