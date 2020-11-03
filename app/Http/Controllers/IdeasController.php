@@ -13,7 +13,11 @@ class IdeasController extends Controller
 
 
     public function getIdeas(){
-        $categories = Categories::select('categories.id')->get();
+        $categories = Categories::select('categories.id',
+            'categories.title',
+            'categories.description',
+            'categories.image'
+        )->get();
         $affichage = array();
         foreach ($categories as $category){
             $id=$category->id;
@@ -27,7 +31,8 @@ class IdeasController extends Controller
                     'idees.statut',
                     'idees.upvotes',
                     'users.name')->get();
-            $affichage[$category->title] = $ideas;
+            $title = $category->title;
+            $affichage[$title] = $ideas;
         }
 
         return view('yann', [ 'affichage' => $affichage]);
