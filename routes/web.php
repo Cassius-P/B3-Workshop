@@ -17,6 +17,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/category', function () {
+    return view('category');
+});
+
 Auth::routes();
 
 Route::group(['prefix' => 'admin'], function () {
