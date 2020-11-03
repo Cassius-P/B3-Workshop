@@ -24,9 +24,9 @@ class CategoriesController extends Controller{
             )->first();
 
             $ideas = DB::table('idees')->join('categories',
-                'categories.id',
+                'idees.category_id',
                 '=',
-                'idees.category_id'
+                'categories.id'
             )->where('categories.id','=',$category->id
             )->select('idees.*')->get();
 
