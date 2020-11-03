@@ -29,7 +29,7 @@ class IdeasController extends Controller
                     'idees.statut',
                     'idees.upvotes',
                     'users.name')->get();
-            $affichage[$category.title] = $ideas;
+            $affichage[$category->title] = $ideas;
         }
 
         return view('yann', ['affichage'=>$affichage]);
