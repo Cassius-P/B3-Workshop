@@ -13,12 +13,12 @@ class IdeasController extends Controller
 
 
     public function getIdeas(){
-        $categories = Categories::select('categories.id')->get();
+        $categories = Categories::select('categories.*')->get();
         $affichage = array();
         foreach ($categories as $category){
             $id=$category->id;
-            $ideas= DB::table('categories_idea')->where('categories_idea.categories_id', '=', $id)->join('idees', 'categories_idea.ideas_id', '=', 'idees.id')->join(
-                'users', 'idees.user_id', '=', 'users.id')->where('idees.statut', '=', 1)->select(
+            $ideas= DB::table('categories_idea')->where('categories_idea.categories_id', '=', $id)->join('idees', 'categories_idea.ideas_id', '=', 'idees.id')->where('idees.statut', '=', 1)->joinSub(
+                'users', 'idees.user_id', '=', 'users.id')->select(
                     'idees.id',
                     'idees.title',
                     'idees.description',
@@ -27,7 +27,8 @@ class IdeasController extends Controller
                     'idees.statut',
                     'idees.upvotes',
                     'users.name')->get();
-            $affichage[$category->title] = $ideas;
+            $title = $category->title;
+            $affichage[$title] = $ideas;
         }
 
         return view('yann', [ 'affichage' => $affichage]);
