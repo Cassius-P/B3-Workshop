@@ -9,6 +9,6 @@ class IdeaController extends Controller
     public function index(){
         
             
-        }
+        
     }
 }
