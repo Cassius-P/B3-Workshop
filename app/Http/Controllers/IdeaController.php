@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 class IdeaController extends Controller
 {
     public function index(){
-
+        
+            
+        }
     }
 }
