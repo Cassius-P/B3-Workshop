@@ -50,7 +50,7 @@
                                                 <input type="checkbox" class="select_all">
                                             </th>
                                         @endif
-                                            {{print($dataType)}}
+
                                             <?php
                                                 $row = $dataType->browseRows;
                                             ?>
@@ -175,33 +175,11 @@
                                     {{print($dataTypeContent)}}
                                     @foreach($dataTypeContent as $data)
                                         <tr>
-                                           <td>
-                                               {{$data->created_at}}
-                                           </td>
-                                            <td>
-                                                {{$data->title}}
-                                            </td>
-                                            <td>
-                                                {{$data->description}}
-                                            </td>
-                                            <td>
-                                                @php
-                                                    if ($data->{$row[5]->field.'_browse'}) {
-                                                        $data->{$row[5]->field} = $data->{$row[5]->field.'_browse'};
-                                                    }
-
-                                                @endphp
-                                                @if($row[5]->type == 'relationship')
-                                                    @include('voyager::formfields.relationship', ['view' => 'browse','options' => $row[5]->details])
-                                                @endif
-
-                                            </td>
-                                            <td>
-                                                {{$data->created_at}}
-                                            </td>
-                                            <td>
-                                                {{$data->created_at}}
-                                            </td>
+                                            @if($showCheckboxColumn)
+                                                <td>
+                                                    <input type="checkbox" name="row_id" id="checkbox_{{ $data->getKey() }}" value="{{ $data->getKey() }}">
+                                                </td>
+                                            @endif
                                             @foreach($dataType->browseRows as $row)
                                                 @php
                                                     if ($data->{$row->field.'_browse'}) {
