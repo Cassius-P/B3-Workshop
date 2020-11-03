@@ -23,12 +23,16 @@ class CategoriesController extends Controller{
                 'categories.image'
             )->first();
 
-            $ideas = DB::table('idees')->join('categories',
+            $ideas= DB::table('categories_idea')->where('categories_idea.categories_id', '=', $id)->join('idees', 'categories_idea.ideas_id', '=', 'idees.id')->where('idees.statut', '=', "1")->leftJoin(
+                'users', 'idees.user_id', '=', 'users.id')->select(
+                'idees.id',
+                'idees.title',
+                'idees.description',
+                'idees.user_id',
                 'idees.category_id',
-                '=',
-                'categories.id'
-            )->where('categories.id','=',$category->id
-            )->select('idees.*')->get();
+                'idees.statut',
+                'idees.upvotes',
+                'users.name')->get();
 
             foreach($ideas as $idea){
                 $idea->vote = Votes::where('idea_id', '=', $idea->id)->count();
