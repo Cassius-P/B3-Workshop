@@ -5,7 +5,7 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    {{print_r($affichage)}}
+                    {{print($affichage)}}
                 </div>
             </div>
         </div>
