@@ -23,7 +23,7 @@ class CategoriesController extends Controller{
                 'categories.image'
             )->first();
 
-            $ideas = DB::table('idees')->where('idees.statut','=',1)->join('categories',
+            $ideas = DB::table('idees')->where('idees.statut','=',"1")->join('categories',
                 'categories.id',
                 '=',
                 'idees.category_id'
