@@ -27,7 +27,7 @@ class CategoriesController extends Controller{
                 'categories.id',
                 '=',
                 'idees.category_id'
-            )->where('categories.id','=',$category.id
+            )->where('categories.id','=',$category->id
             )->where('idees.statut','=',1
             )->select('idees.*')->get();
 
