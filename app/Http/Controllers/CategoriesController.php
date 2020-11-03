@@ -7,7 +7,7 @@ use App\Models\Categories;
 use App\Models\Ideas;
 use App\Models\CategoriesIdea;
 use App\Models\Votes;
-
+use Illuminate\Support\Facades\DB;
 
 class CategoriesController extends Controller{
     public function index($url){
