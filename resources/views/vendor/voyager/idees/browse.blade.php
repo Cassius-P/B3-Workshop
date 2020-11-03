@@ -185,7 +185,12 @@
                                                 {{$data->description}}
                                             </td>
                                             <td>
-                                                {{--@include('voyager::formfields.relationship', ['view' => 'browse','options' => $row->details])--}}
+                                                @php
+                                                    if ($data->{$row[5]->field.'_browse'}) {
+                                                        $data->{$row[5]->field} = $data->{$row[5]->field.'_browse'};
+                                                    }
+                                                @endphp
+                                                @include('voyager::formfields.relationship', ['view' => 'browse','options' => $row[5]->details])
                                             </td>
                                             <td>
                                                 {{$data->created_at}}
