@@ -13,11 +13,7 @@ class IdeasController extends Controller
 
 
     public function getIdeas(){
-        $categories = Categories::select('categories.id',
-            'categories.title',
-            'categories.description',
-            'categories.image'
-        )->get();
+        $categories = Categories::select('categories.*')->get();
         $affichage = array();
         foreach ($categories as $category){
             $id=$category->id;
