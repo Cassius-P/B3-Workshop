@@ -7,5 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Ideas extends Model
 {
-    use HasFactory;
+    use Resizable;
+    protected $table = 'idees';
+    protected $primaryKey = 'id';
+    
 }
