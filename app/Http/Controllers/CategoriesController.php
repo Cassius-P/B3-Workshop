@@ -27,12 +27,12 @@ class CategoriesController extends Controller{
                 'categories.id',
                 '=',
                 'idees.category_id'
-            )->where('categories.id','=',$category.id
+            )->where('categories.id','=',$category->id
             )->where('idees.statut','=',1
             )->select('idees.*')->get();
 
             foreach($ideas as $idea){
-                $idea['votes'] = Votes::where('idea_id', '=', $idea.id)->count();
+                $idea->vote = Votes::where('idea_id', '=', $idea->id)->count();
             }
 
             return view('keita', ['ideas' => $ideas, 'category' => $category]);

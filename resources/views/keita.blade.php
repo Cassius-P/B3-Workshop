@@ -6,9 +6,9 @@
             <div class="col-md-8">
                 <div class="card">
                     <div class="card-header">{{ __('Dashboard') }}
-                        {{print_r($category)}}
+                        {{print($category)}}
                     </div>
-                        {{print_r($ideas)}}
+                        {{print($ideas)}}
                 </div>
             </div>
         </div>
