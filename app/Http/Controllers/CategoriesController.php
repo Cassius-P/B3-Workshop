@@ -32,7 +32,7 @@ class CategoriesController extends Controller{
             )->select('idees.*')->get();
 
             foreach($ideas as $idea){
-                $idea['votes'] = Votes::where('idea_id', '=', $idea.id)->count();
+                $idea->vote = Votes::where('idea_id', '=', $idea->id)->count();
             }
 
             return view('keita', ['ideas' => $ideas, 'category' => $category]);
