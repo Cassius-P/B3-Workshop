@@ -50,7 +50,7 @@
                                                 <input type="checkbox" class="select_all">
                                             </th>
                                         @endif
-
+                                            {{print($dataType)}}
                                             <?php
                                                 $row = $dataType->browseRows;
                                             ?>
@@ -175,12 +175,25 @@
                                     {{print($dataTypeContent)}}
                                     @foreach($dataTypeContent as $data)
                                         <tr>
-                                            @if($showCheckboxColumn)
-                                                <td>
-                                                    <input type="checkbox" name="row_id" id="checkbox_{{ $data->getKey() }}" value="{{ $data->getKey() }}">
-                                                </td>
-                                            @endif
-                                            @foreach($dataType->browseRows as $row)
+                                           <td>
+                                               {{$data->created_at}}
+                                           </td>
+                                            <td>
+                                                {{$data->title}}
+                                            </td>
+                                            <td>
+                                                {{$data->description}}
+                                            </td>
+                                            <td>
+                                                @include('voyager::formfields.relationship', ['view' => 'browse','options' => $row->details])
+                                            </td>
+                                            <td>
+                                                {{$data->created_at}}
+                                            </td>
+                                            <td>
+                                                {{$data->created_at}}
+                                            </td>
+                                            {{--@foreach($dataType->browseRows as $row)
                                                 @php
                                                     if ($data->{$row->field.'_browse'}) {
                                                         $data->{$row->field} = $data->{$row->field.'_browse'};
@@ -317,7 +330,7 @@
                                                         <span>{{ $data->{$row->field} }}</span>
                                                     @endif
                                                 </td>
-                                            @endforeach
+                                            @endforeach--}}
                                             <td class="no-sort no-click bread-actions">
                                                 @foreach($actions as $action)
                                                     @if (!method_exists($action, 'massAction'))
