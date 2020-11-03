@@ -9,7 +9,7 @@ use App\Http\Controllers\Back\VoyagerBreadController as BaseVoyagerBreadControll
 
 class IdeesController extends VoyagerBreadController
 {
-    public function index(Request $request){
+    /*public function index(Request $request){
         $slug = $this->getSlug($request);
 
         $dataType = Voyager::model('DataType')->where('slug', '=', $slug);
@@ -34,5 +34,8 @@ class IdeesController extends VoyagerBreadController
             'sortOrder',
             'isServerSide'
         ));
+    }*/
+    public function index(){
+
     }
 }
