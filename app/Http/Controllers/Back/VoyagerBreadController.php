@@ -7,7 +7,7 @@ use TCG\Voyager\Http\Controllers\VoyagerBreadController as BaseVoyagerBreadContr
 
 class VoyagerBreadController extends BaseVoyagerBreadController
 {
-    public function index(Request $request){
+    public function index(){
         //
     }
 }
