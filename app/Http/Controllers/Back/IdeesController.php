@@ -35,7 +35,4 @@ class IdeesController extends VoyagerBreadController
             'isServerSide'
         ));
     }*/
-    public function index(){
-        return view('vendor/voyager/idees/browse');
-    }
 }
