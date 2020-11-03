@@ -20,7 +20,7 @@ class IdeasController extends Controller
         foreach ($categories as $category){
             $id=$category->id;
             $ideas= DB::table('categories_idea')->where('categories_idea.categories_id', '=', $id)->join('idees', 'categories_idea.ideas_id', '=', 'idees.id')->join(
-                'users', 'idees.users_id', '=', 'users.id')->where('idees.statut', '=', 1)->select(
+                'users', 'idees.user_id', '=', 'users.id')->where('idees.statut', '=', 1)->select(
                     'idees.id',
                     'idees.title',
                     'idees.description',
