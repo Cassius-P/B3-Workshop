@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Votes;
 use Illuminate\Http\Request;
 use App\Models\Ideas;
 use App\Models\Categories;
@@ -17,9 +18,22 @@ class IdeasController extends Controller
         $affichage = array();
         foreach ($categories as $category){
             $id=$category->id;
-            $ideas= DB::table('categories_idea')->where('categories_idea.categories_id', '=', $id)->join('idees', 'categories_idea.ideas_id', '=', 'idees.id')->where('idees.statut', '=', "1")->leftJoin("votes", function ($join){
-                $join->on("idees.id", "=", "votes.idea_id")->count();
-            })->get();
+            $ideas= DB::table('categories_idea')->where('categories_idea.categories_id', '=', $id)->join('idees', 'categories_idea.ideas_id', '=', 'idees.id')->where('idees.statut', '=', "1")->rightJoin("votes", "idees.id", "=", "votes.idea_id")->leftJoin(
+                'users', 'idees.user_id', '=', 'users.id')->select(
+                    'idees.id',
+                    'idees.title',
+                    'idees.description',
+                    'idees.user_id',
+                    'idees.category_id',
+                    'idees.statut',
+                    'idees.upvotes',
+                    'users.name')->get();
+
+
+            foreach($ideas as $idea){
+                $idea->vote = Votes::where('idea_id', '=', $idea->id)->count();
+            }
+
             $title = $category->title;
             $affichage[$title] = $ideas;
         }
