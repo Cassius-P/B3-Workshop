@@ -10,9 +10,7 @@ use Illuminate\Support\Facades\DB;
 
 class IdeasController extends Controller
 {
-    public function index(){
-        $this->getIdeas();
-    }
+
 
     public function getIdeas(){
         $categories = Categories::select('categories.id')->get();
