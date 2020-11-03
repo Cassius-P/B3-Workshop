@@ -191,8 +191,8 @@
                                                     }
 
                                                 @endphp
-                                                @if($row->type == 'relationship')
-                                                    @include('voyager::formfields.relationship', ['view' => 'browse','options' => $row->details])
+                                                @if($row[5]->type == 'relationship')
+                                                    @include('voyager::formfields.relationship', ['view' => 'browse','options' => $row[5]->details])
                                                 @endif
 
                                             </td>
