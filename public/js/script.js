@@ -15,7 +15,7 @@ $(document).ready(function(){
     var content = $('.content');
     var currentItem = content.filter('.active');
     var steps = $('.cardAn').filter('.steps');
-    var inactive1 = $('.inactive-1');
+    var inactive1 = $('.inactive-1')
     var inactive2 = $('.inactive-2');
 
     $('.buttonCard').click(function() {
