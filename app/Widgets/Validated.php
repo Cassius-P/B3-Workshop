@@ -39,12 +39,18 @@ class Validated extends BaseDimmer
                 $count++;
             }
         }
-        $string = 'idées validées';
+        $idée = "idée";
+        $validée ="validée";
+        if($count > 1){
+            $idée +="s";
+            $validée+="s";
+        }
+        $string = $idée.' '.$validée;
 
         return view('voyager::dimmer', array_merge($this->config, [
             'icon'   => 'voyager-trash',
             'title'  => "{$count} {$string}",
-            'text'   => "{$count} idées ont été validées cette semaine",
+            'text'   => "{$count} {$idée} ont été {$validée} cette semaine",
             'button' => [
                 'text' => 'Accéder aux idées',
                 'link' => route('voyager.idees.index'),
