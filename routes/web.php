@@ -31,3 +31,11 @@ Route::get('/{x}/{y}', [App\Http\Controllers\IdeaController::class, 'index']);
 
 Route::post('/xhr', [App\Http\Controllers\XHRController::class, 'newIdea']);
 
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
