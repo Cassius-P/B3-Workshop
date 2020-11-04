@@ -33,7 +33,7 @@ class Validated extends BaseDimmer
         foreach ($nonValidated as $idea){
             $now = Carbon::now();
 
-            $date = Carbon::createFromFormat('d-M-Y', $idea->created_at);
+            $date = Carbon::parse($idea->created_at);
 
             if($date->diffInWeeks($now) == 0){
                 $count++;
