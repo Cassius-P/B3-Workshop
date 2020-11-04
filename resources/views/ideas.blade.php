@@ -1,5 +1,13 @@
 @extends('layouts.app')
 
+@section('extraTop')
+    <link href="{{ asset('css/style.scss') }}" rel="stylesheet">
+@endsection
+
+@section('extraBottom')
+    <script type="text/javascript" src="{{ asset('js/card.js') }}"></script>
+@endsection
+
 @section('content')
 <div class="container w-75 p-3">
     <div class="row">
