@@ -3,7 +3,7 @@
 @section('content')
 <div class="container w-75 p-3">
     <div class="row">
-        <div class="owl-carousel">
+        <div id="owl-carousel">
             @foreach($affichage as $cat)
                 <div class="card">
                     <div class="content active">
