@@ -11,8 +11,6 @@ use Illuminate\Support\Facades\DB;
 
 class IdeasController extends Controller
 {
-
-
     public function getIdeas(){
         $categories = Categories::select('categories.*')->get();
         $affichage = array();
