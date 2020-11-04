@@ -26,9 +26,6 @@
                         <a class="buttonCard" href="#">Next step &rarr;</a>
                     </div>
                     @endfor
-                    <div class="progress-container">
-                        <div class="step"></div>
-                    </div>
                 </div>
             @endforeach
         </div>
