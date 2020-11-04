@@ -39,14 +39,14 @@ class Validated extends BaseDimmer
                 $count++;
             }
         }
-        $string = trans_choice('voyager::dimmer.ideas', $count);
+        $string = 'idées non validées';
 
         return view('voyager::dimmer', array_merge($this->config, [
-            'icon'   => 'voyager-news',
+            'icon'   => 'voyager-trash',
             'title'  => "{$count} {$string}",
-            'text'   => __('voyager::dimmer.ideas_text', ['count' => $count, 'string' => Str::lower($string)]),
+            'text'   => '2 idées n\'ont pas été validées cette semaine',
             'button' => [
-                'text' => __('voyager::dimmer.ideas_link_text'),
+                'text' => 'Accéder aux idées',
                 'link' => route('voyager.idees.index'),
             ],
             'image' => voyager_asset('images/widget-backgrounds/02.jpg'),
