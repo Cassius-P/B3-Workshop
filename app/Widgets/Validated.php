@@ -32,16 +32,10 @@ class Validated extends BaseDimmer
         $count = 0;
         foreach ($nonValidated as $idea){
             $now = Carbon::now();
-            $isoNow = $now->setISODate($now->year, $now->month, $now->day);
-            $stNow = $isoNow->startOfWeek();
-            $endNow = $isoNow->endOfWeek();
 
-            $date = Carbon::createFromFormat('d/M/Y', $idea->created_at);
-            $isoDate = $date->setISODate($now->year, $now->month, $now->day);
-            $stDate = $isoDate->startOfWeek();
-            $endDate = $isoDate->endOfWeek();
+            $date = Carbon::createFromFormat('d-M-Y', $idea->created_at);
 
-            if($stNow == $stDate && $endNow == $endDate){
+            if($date->diffInWeeks($now) == 0){
                 $count++;
             }
         }
