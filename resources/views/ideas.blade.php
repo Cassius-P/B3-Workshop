@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('extraTop')
-    <link href="{{ asset('css/style.scss') }}" rel="stylesheet">
+    <link href="{{ asset('css/style2.scss') }}" rel="stylesheet">
 @endsection
 
 @section('extraBottom')
