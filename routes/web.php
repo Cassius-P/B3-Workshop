@@ -17,14 +17,13 @@ Route::get('/', function () {
     return view('category');
 });
 
-<<<<<<< Updated upstream
+Route::get('/ideas', function () {
+    return view('ideas');
+});
+
 Route::get('/category', function () {
     return view('category');
 });
-=======
-
-
->>>>>>> Stashed changes
 
 Auth::routes();
 

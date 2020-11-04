@@ -214,6 +214,15 @@ img {
   border-style: none;
 }
 
+.vertical-scrollable> .row { 
+  overflow-y: auto;
+  max-height: 36em;  
+} 
+
+.bg-ambre {
+  background-color: #F0C300 !important;
+}
+
 svg {
   overflow: hidden;
   vertical-align: middle;
@@ -3100,6 +3109,9 @@ fieldset:disabled a.btn {
   color: #fff;
   background-color: #473c38;
   border-color: #473c38;
+}
+.btn-brown:hover {
+  color: #01D758;
 }
 
 .separator {
@@ -7221,6 +7233,18 @@ button.bg-dark:focus {
 
 .border-primary {
   border-color: #3490dc !important;
+}
+
+.border-custom {
+  border: 3px #f0c300 !important;
+  border-style: dotted !important;
+  border-width: thick !important;
+}
+
+.border-custom-green {
+  border: 3px #01D758 !important;
+  border-style: dotted !important;
+  border-width: thick !important;
 }
 
 .border-secondary {
