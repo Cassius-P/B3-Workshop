@@ -5,7 +5,7 @@
 @endsection
 
 @section('extraBottom')
-    <script type="text/javascript" src="{{ asset('js/card.js') }}"></script>
+
 @endsection
 
 @section('content')
@@ -13,11 +13,11 @@
     <div class="row">
         <div class="owl-carousel">
             @foreach($affichage as $key => $cat)
-                <div class="card">
+                <div class="cardAn">
                     <div class="content active">
                         <h1>{{$key}}</h1>
                         <p><i class="em em-coffee"></i></p>
-                        <a class="button" href="#">Next step &rarr;</a>
+                        <a class="buttonCard" href="#">Next step &rarr;</a>
                     </div>
                     @for($i = 0; $i < count($cat); $i++)
                     <div class="content">
