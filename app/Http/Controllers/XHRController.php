@@ -12,9 +12,9 @@ class XHRController extends Controller{
             $module = $sent->module;
             $message = "";
             if($module === 'idea'){
-                $message = insertIdea($sent);
+                $message = $this->insertIdea($sent);
             }elseif($module === 'like'){
-                $message = insertLike($sent);
+                $message = $this->insertLike($sent);
             }
             return response()->json(['message' => $message], 200);
         }else{
