@@ -17,10 +17,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/ideas', function () {
-    return view('ideas');
-});
-
 Auth::routes();
 
 Route::group(['prefix' => 'admin'], function () {
@@ -31,4 +27,6 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/idees', [App\Http\Controllers\IdeasController::class, 'getIdeas']);
 Route::get('/{x}', [App\Http\Controllers\CategoriesController::class, 'index']);
 Route::get('/{x}/{y}', [App\Http\Controllers\IdeaController::class, 'index']);
+
+Route::post('/xhr', [App\Http\Controllers\XHRController::class, 'newIdea']);
 
