@@ -40,7 +40,7 @@
                 <h2 class="text-center pt-1 pb-3">Liste des propositions déjà émises :</h2>
                 <div class="owl-carousel">
                     @foreach($affichage as $key => $cat)
-                        <div class="vertical-scrollable">
+                        <div class="vertical-scrollable owl-item">
                             <div class="row text-center">
                                 <!-- La card ci-dessous est celle à utiliser (pour en générer plusieurs), les autres servent simplement d'exemple pour le scrolling. -->
                                 <div class="card mb-3 w-100">
