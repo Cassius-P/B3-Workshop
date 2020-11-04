@@ -14,7 +14,7 @@
                         </div>
                         <div class="form-group">
                             <label for="description">Description</label>
-                            <textarea class="form-control" id="description" placeholder="Description" rows="12"></textarea>
+                            <textarea class="form-control" id="description" placeholder="Décrivez-nous votre idée avec le plus de précision possible..." rows="12"></textarea>
                         </div>
                     </form>
                     <div class="text-center">
