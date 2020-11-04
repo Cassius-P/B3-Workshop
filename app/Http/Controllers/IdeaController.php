@@ -33,7 +33,7 @@ class IdeaController extends Controller
                 $name = DB::table('users')->where('users.id', '=', $idee->user_id)->select('users.name')->first();
                 $idee->user = $name->name;
 
-                return view('idea', ['url' => $idee]);
+                return view('idea', ['idee' => $idee]);
             }
 
         }

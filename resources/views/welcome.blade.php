@@ -20,7 +20,7 @@
         unde, magnam esse mollitia. Aliquam doloremque fugit laudantium quisquam iusto! Lorem ipsum dolor, sit amet
         consectetur adipisicing elit. Unde distinctio qui pariatur quasi numquam quo iusto voluptatibus saepe error quis
         doloribus amet blanditiis nam perferendis, minima recusandae, accusamus accusantium obcaecati officia? Sed iste
-        quasi earum tenetur labore libero blanditiis repellendus? 
+        quasi earum tenetur labore libero blanditiis repellendus?
     </p>
 </div>
 <div class="container pb-3 mw-100">
