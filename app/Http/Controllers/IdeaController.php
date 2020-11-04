@@ -22,7 +22,7 @@ class IdeaController extends Controller
                 'idees.description',
                 'idees.user_id',
                 'idees.statut',
-                'categories.slug')->get();
+                'categories.slug')->first();
             
                 
             if ($idee->statut == 0) {
