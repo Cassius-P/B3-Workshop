@@ -11,7 +11,7 @@
             <section id="about">
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-8 mx-auto">
+                        <div class="col-lg-9 mx-auto">
                             <h2 class="text-center">A propos</h2>
                             <p class="lead">Voici une pésentation de ce que peut contenir éventuellement la descirption d'une catégorie :</p>
                             <p> Prenons l'exemple d'une catégorie au hasard comme par exemple l'amélioration d'espace verts
