@@ -2,11 +2,11 @@ $(document).ready(function() {
 
     var content = $('.content');
     var currentItem = content.filter('.active');
-    var steps = $('.card').filter('.steps');
+    var steps = $('.cardAn').filter('.steps');
     var inactive1 = $('.inactive-1');
     var inactive2 = $('.inactive-2');
 
-    $('.button').click(function() {
+    $('.buttonCard').click(function() {
         var nextItem = currentItem.next();
         var lastItem = content.last();
         var contentFirst = content.first();
