@@ -48,7 +48,7 @@
                                     <div class="card-body">
 
                                         <div class="text-right">
-                                            <a href="/{{key}}" class="btn btn-brown">Détails...</a>
+                                            <a href="/{{$key}}" class="btn btn-brown">Détails...</a>
                                         </div>
                                     </div>
                                 </div>
