@@ -15,8 +15,6 @@
         "laravel/framework": "^8.12",
         "laravel/tinker": "^2.5",
 
-        "model-log": "^1.0.2",
-
         "laravel/ui": "^3.0",
         "tcg/voyager": "^1.4"
     },
