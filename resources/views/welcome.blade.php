@@ -23,12 +23,15 @@
         quasi earum tenetur labore libero blanditiis repellendus?
     </p>
 </div>
+
+
+
 <div class="container pb-3 mw-100">
     <div class="text-center">
         <h3 class="separator">Comment utiliser Biosimul ?</h3>
     </div>
     <div class="row justify-content-around pt-3 pb-3">
-        <div class="col-xs-1 pb-2">
+        {{--<div class="col-xs-1 pb-2">
             <div class="card shadow rounded" style="width: 18rem; height: 19rem; background-color: #eda27c;">
                 <div class="card-body text-center">
                     <img class="pb-2" src={{ asset('/assets/icons/edit.png') }}>
@@ -42,6 +45,12 @@
                     </a>
                 </div>
             </div>
+        </div>--}}
+        <div class="col-lg-4">
+            <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
+            <h2>Heading</h2>
+            <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
+            <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
         </div>
         <div class="col-xs-1 pb-2">
             <div class="card shadow rounded" style="width: 18rem; height: 19rem; background-color: #f0c300;">

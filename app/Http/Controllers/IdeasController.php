@@ -25,7 +25,7 @@ class IdeasController extends Controller
                     'idees.description',
                     'idees.user_id',
                     'idees.statut',
-                    'users.name')->get();
+                    'users.name')->limit(9)->get();
 
 
             foreach($ideas as $idea){
