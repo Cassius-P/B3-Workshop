@@ -38,7 +38,7 @@ class CategoriesController extends Controller{
                 $idea->vote = Votes::where('idea_id', '=', $idea->id)->count();
             }
 
-            return view('keita', ['ideas' => $ideas, 'category' => $category]);
+            return view('category', ['ideas' => $ideas, 'category' => $category]);
         }
     }
 
