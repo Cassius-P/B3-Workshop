@@ -7,7 +7,7 @@
                 <div class="card">
                     <div class="card-header">{{ __('Dashboard') }}
                     </div>
-                        {{$url}}
+                        {{json_encode($url)}}
                 </div>
             </div>
         </div>
