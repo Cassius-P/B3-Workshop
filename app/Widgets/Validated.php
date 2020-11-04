@@ -50,7 +50,7 @@ class Validated extends BaseDimmer
         $string = $idée.' '.$validée;
 
         return view('voyager::dimmer', array_merge($this->config, [
-            'icon'   => 'voyager-trash',
+            'icon'   => 'voyager-milestone',
             'title'  => "{$count} {$string}",
             'text'   => "{$count} {$idée} {$avoir} été {$validée} cette semaine",
             'button' => [
