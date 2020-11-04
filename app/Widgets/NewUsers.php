@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
 use TCG\Voyager\Facades\Voyager;
 use TCG\Voyager\Widgets\BaseDimmer;
-use App\Models\Ideas;
+use App\Models\Users;
 
 class Validated extends BaseDimmer
 {
@@ -24,32 +24,31 @@ class Validated extends BaseDimmer
      */
     public function run()
     {
-        $nonValidated = Ideas::where('statut', '=', 0)->select(
-            'idees.id',
-            'idees.created_at',
-            'idees.statut')->get();
+        $users = Users::select(
+            'users.id',
+            'users.created_at')->get();
 
         $count = 0;
-        foreach ($nonValidated as $idea){
+        foreach ($users as $user){
             $now = Carbon::now();
 
-            $date = Carbon::parse($idea->created_at);
+            $date = Carbon::parse($user->created_at);
 
             if($date->diffInWeeks($now) == 0){
                 $count++;
             }
         }
-        $string = 'idées non validées';
+        $string = 'nouveaux utilisateurs';
 
         return view('voyager::dimmer', array_merge($this->config, [
-            'icon'   => 'voyager-trash',
+            'icon'   => 'voyager-leaf',
             'title'  => "{$count} {$string}",
-            'text'   => "{$count} idées n'ont pas été validées cette semaine",
+            'text'   => "{$count} utilisateurs se sont engagés pour innover ensemble cette semaine",
             'button' => [
-                'text' => 'Accéder aux idées',
-                'link' => route('voyager.idees.index'),
+                'text' => 'Accéder aux utilisateurs',
+                'link' => route('voyager.users.index'),
             ],
-            'image' => voyager_asset('images/widget-backgrounds/02.jpg'),
+            'image' => voyager_asset('images/widget-backgrounds/03.jpg'),
         ]));
     }
 
