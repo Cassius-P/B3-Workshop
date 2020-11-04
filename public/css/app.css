@@ -707,6 +707,14 @@ pre code {
   margin-left: -15px;
 }
 
+.row-brown {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+  background-color: #473c38;
+}
+
 .no-gutters {
   margin-right: 0;
   margin-left: 0;
@@ -2514,6 +2522,20 @@ textarea.form-control.is-valid {
   box-shadow: 0 0 0 0.2rem rgba(56, 193, 114, 0.25);
 }
 
+.b-shadow:hover {
+  box-shadow: 0px 6px 67px -5px rgba(0,0,0,0.75);
+}
+
+.b-shadow {
+  -webkit-box-shadow: 0px 6px 67px -13px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 6px 67px -13px rgba(0,0,0,0.75);
+}
+
+.gradient- {
+  background: rgb(34,193,195);
+  background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+}
+
 .invalid-feedback {
   display: none;
   width: 100%;
@@ -3072,6 +3094,33 @@ fieldset:disabled a.btn {
 .btn-dark:not(:disabled):not(.disabled).active:focus,
 .show > .btn-dark.dropdown-toggle:focus {
   box-shadow: 0 0 0 0.2rem rgba(82, 88, 93, 0.5);
+}
+
+.btn-brown {
+  color: #fff;
+  background-color: #473c38;
+  border-color: #473c38;
+}
+
+.separator {
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+.separator::before, .separator::after {
+  content: '';
+  flex: 1;
+  border-top: 3px dotted #f0c300;
+    border-top-width:5px;
+    border-right-width:0px;
+    border-bottom-width:0px;
+    border-left-width:0px;
+}
+.separator::before {
+  margin-right: .25em;
+}
+.separator::after {
+  margin-left: .25em;
 }
 
 .btn-outline-primary {
