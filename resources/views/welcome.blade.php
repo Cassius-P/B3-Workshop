@@ -30,7 +30,7 @@
     <div class="text-center">
         <h3 class="separator">Comment utiliser Biosimul ?</h3>
     </div>
-    <div class="row justify-content-around p-3 mycards">
+    <div class="row justify-content-around p-3 stacked-cards">
         {{--<ul>
             <li>
                 <div class="col-xs-1 pb-2">
