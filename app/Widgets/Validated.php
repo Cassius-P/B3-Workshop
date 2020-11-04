@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
 use TCG\Voyager\Facades\Voyager;
 use TCG\Voyager\Widgets\BaseDimmer;
+use App\Models\Ideas;
 
 class Validated extends BaseDimmer
 {
@@ -22,16 +23,16 @@ class Validated extends BaseDimmer
      */
     public function run()
     {
-        $count = Voyager::model('Ideas')->count();
-        $string = trans_choice('voyager::dimmer.post', $count);
+        $count = Ideas::where('statut', '=', 0)->count();
+        $string = trans_choice('voyager::dimmer.ideas', $count);
 
         return view('voyager::dimmer', array_merge($this->config, [
             'icon'   => 'voyager-news',
             'title'  => "{$count} {$string}",
-            'text'   => __('voyager::dimmer.post_text', ['count' => $count, 'string' => Str::lower($string)]),
+            'text'   => __('voyager::dimmer.ideas_text', ['count' => $count, 'string' => Str::lower($string)]),
             'button' => [
-                'text' => __('voyager::dimmer.post_link_text'),
-                'link' => route('voyager.posts.index'),
+                'text' => __('voyager::dimmer.ideas_link_text'),
+                'link' => route('voyager.ideas.index'),
             ],
             'image' => voyager_asset('images/widget-backgrounds/02.jpg'),
         ]));
