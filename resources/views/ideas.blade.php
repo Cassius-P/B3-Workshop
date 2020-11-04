@@ -15,8 +15,8 @@
             @foreach($affichage as $key => $cat)
                 <div class="container">
                     <div class="inner-container">
-                        <div class="card inactive-1"></div>
-                        <div class="card inactive-2"></div>
+                        <div class="cardAn inactive-1"></div>
+                        <div class="cardAn inactive-2"></div>
                         <div class="cardAn">
                             <div class="content active">
                                 <h1>{{$key}}</h1>
