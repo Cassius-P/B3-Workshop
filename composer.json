@@ -16,6 +16,10 @@
         "laravel/framework": "^8.12",
         "laravel/socialite": "^5.1",
         "laravel/tinker": "^2.5",
+<<<<<<< HEAD
+=======
+
+>>>>>>> 290dc9c043f59f93b1d8029b124644fa1b345e78
         "laravel/ui": "^3.0",
         "tcg/voyager": "^1.4"
     },
