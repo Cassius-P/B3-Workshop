@@ -78,3 +78,19 @@
 #about{
     margin-bottom:5%;
 }
+
+.row-brown {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+    background-color: #473c38;
+}
+.btn-brown {
+    color: #fff;
+    background-color: #473c38;
+    border-color: #473c38;
+}
+.btn-brown:hover {
+    color: #01D758;
+}
