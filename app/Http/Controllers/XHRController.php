@@ -10,6 +10,7 @@ class XHRController extends Controller{
         $sent = json_decode($request->get('info'));
         if($sent){
             $module = $sent->module;
+            $message = "";
             if($module === 'idea'){
                 $message = insertIdea($sent);
             }elseif($module === 'like'){
@@ -26,37 +27,37 @@ class XHRController extends Controller{
         $desc = $sent->desc;
         $user_id = $sent->user_id;
 
-        try 
-        { 
+        try
+        {
             DB::table('idees')->insertGetId(
                 ['title' => $titre, 'description' => $desc, 'user_id' => $user_id]
             );
 
-            
+
             return 'ok';
-        } 
-        catch(\Illuminate\Database\QueryException $e){ 
-            return $e->getMessage(); 
-        } 
-        
+        }
+        catch(\Illuminate\Database\QueryException $e){
+            return $e->getMessage();
+        }
+
     }
 
     private function insertLike($sent){
         $prop_id = $sent->prop_id;
         $user_id = $sent->user_id;
 
-        try { 
+        try {
             DB::table('votes')->insertGetId(
                 ['idea_id' => $prop_id, 'user_id' => $user_id]
             );
             return 'ok';
 
 
-        } 
-        catch(\Illuminate\Database\QueryException $e){ 
-             return $e->getMessage(); 
+        }
+        catch(\Illuminate\Database\QueryException $e){
+             return $e->getMessage();
         }
 
-        
+
     }
 }
