@@ -38,7 +38,7 @@
                         <br><br>
                         Si vous souhaitez vous inscrire cliquez-ici:
                     </p>
-                    <a href="{{ route('register') }}"><button type="button" class="btn btn-brown">S'inscrire</button>
+                    <a href="{{ route('register') }}" class="btn btn-brown">S'inscrire</a>
                     </a>
                 </div>
             </div>
