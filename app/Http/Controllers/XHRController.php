@@ -50,6 +50,7 @@ class XHRController extends Controller{
             );
             return 'ok';
             
+
         } 
         catch(\Illuminate\Database\QueryException $e){ 
              return $e->getMessage(); 
