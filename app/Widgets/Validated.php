@@ -2,6 +2,7 @@
 
 namespace App\Widgets;
 
+use Carbon\Carbon;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
 use TCG\Voyager\Facades\Voyager;
@@ -23,7 +24,27 @@ class Validated extends BaseDimmer
      */
     public function run()
     {
-        $count = Ideas::where('statut', '=', 0)->count();
+        $nonValidated = Ideas::where('statut', '=', 0)->select(
+            'idees.id',
+            'idees.created_at',
+            'idees.statut')->get();
+
+        $count = 0;
+        foreach ($nonValidated as $idea){
+            $now = Carbon::now();
+            $isoNow = $now->setISODate($now->year, $now->month, $now->day);
+            $stNow = $isoNow->startOfWeek();
+            $endNow = $isoNow->endOfWeek();
+
+            $date = Carbon::createFromFormat('d/M/Y', $idea->created_at);
+            $isoDate = $date->setISODate($now->year, $now->month, $now->day);
+            $stDate = $isoDate->startOfWeek();
+            $endDate = $isoDate->endOfWeek();
+
+            if($stNow == $stDate && $endNow == $endDate){
+                $count++;
+            }
+        }
         $string = trans_choice('voyager::dimmer.ideas', $count);
 
         return view('voyager::dimmer', array_merge($this->config, [
