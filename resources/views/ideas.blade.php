@@ -11,28 +11,18 @@
                         <p><i class="em em-coffee"></i></p>
                         <a class="button" href="#">Next step &rarr;</a>
                     </div>
+                    @for($i = 0; $i < count($cat); $i++)
                     <div class="content">
-                        <h1>Step 2</h1>
-                        <p>Trip. Spill all over the place.</p>
+                        <h1>{{$cat[$i]->name}}</h1>
+                        <p>{{$cat[$i]->title}}</p>
                         <a class="button" href="#">Next step &rarr;</a>
                     </div>
-                    <div class="content">
-                        <h1>Step 3</h1>
-                        <p>Repeat.</p>
-                        <a class="button" href="#">Next step &rarr;</a>
-                    </div>
+                    @endfor
                     <div class="progress-container">
                         <div class="step"></div>
                     </div>
                 </div>
             @endforeach
-            <div> Your Content </div>
-            <div> Your Content </div>
-            <div> Your Content </div>
-            <div> Your Content </div>
-            <div> Your Content </div>
-            <div> Your Content </div>
-            <div> Your Content </div>
         </div>
         <div class="col-md-6 pb-2">
 
