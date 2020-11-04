@@ -1,7 +1,6 @@
 
 .h-about{
     margin-bottom: 5%;
-
 }
 
 .separator {
@@ -75,9 +74,6 @@
 #about {
     margin-bottom: 3%;
 }
-#about{
-    margin-bottom:5%;
-}
 
 .row-brown {
     display: flex;
@@ -86,14 +82,16 @@
     margin-left: -15px;
     background-color: #473c38;
 }
+
 .btn-brown {
     color: #fff;
     background-color: #473c38;
     border-color: #473c38;
 }
 .btn-brown:hover {
-    color: #01D758;
+    color: rgba(31, 119, 134, 0.788);
 }
+
 .vertical-scrollable> .row {
     overflow-y: auto;
     max-height: 36em;

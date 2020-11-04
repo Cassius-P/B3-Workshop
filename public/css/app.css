@@ -214,15 +214,6 @@ img {
   border-style: none;
 }
 
-.vertical-scrollable> .row { 
-  overflow-y: auto;
-  max-height: 36em;  
-} 
-
-.bg-ambre {
-  background-color: #F0C300 !important;
-}
-
 svg {
   overflow: hidden;
   vertical-align: middle;
@@ -643,25 +634,6 @@ pre code {
   border-radius:5px;
 }
 
-<<<<<<< Updated upstream
-.carte{
-  margin-bottom: 8%;
-}
-
-.container-titre{
-  padding-top: 2%;
-  margin-bottom:3%;
-  border:1px solid black;
-  border-radius:5px;
-}
-
-#about{
-  margin-bottom:3%;
-=======
-#about{
-  margin-bottom:5%;
->>>>>>> Stashed changes
-}
 .container,
 .container-fluid,
 .container-xl,
@@ -714,14 +686,6 @@ pre code {
   flex-wrap: wrap;
   margin-right: -15px;
   margin-left: -15px;
-}
-
-.row-brown {
-  display: flex;
-  flex-wrap: wrap;
-  margin-right: -15px;
-  margin-left: -15px;
-  background-color: #473c38;
 }
 
 .no-gutters {
@@ -3103,36 +3067,6 @@ fieldset:disabled a.btn {
 .btn-dark:not(:disabled):not(.disabled).active:focus,
 .show > .btn-dark.dropdown-toggle:focus {
   box-shadow: 0 0 0 0.2rem rgba(82, 88, 93, 0.5);
-}
-
-.btn-brown {
-  color: #fff;
-  background-color: #473c38;
-  border-color: #473c38;
-}
-.btn-brown:hover {
-  color: #01D758;
-}
-
-.separator {
-  display: flex;
-  align-items: center;
-  text-align: center;
-}
-.separator::before, .separator::after {
-  content: '';
-  flex: 1;
-  border-top: 3px dotted #f0c300;
-    border-top-width:5px;
-    border-right-width:0px;
-    border-bottom-width:0px;
-    border-left-width:0px;
-}
-.separator::before {
-  margin-right: .25em;
-}
-.separator::after {
-  margin-left: .25em;
 }
 
 .btn-outline-primary {
