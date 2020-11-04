@@ -19,6 +19,7 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+    
 </head>
 <body>
     <div id="app">
@@ -72,10 +73,15 @@
                 </div>
             </div>
         </nav>
-
-        <main class="py-4">
-            @yield('content')
-        </main>
+        @if (\Request::is('/'))
+            <main>
+                @yield('content')
+            </main>
+        @else
+            <main class="py-4">
+                @yield('content')
+            </main>
+        @endif
     </div>
 </body>
 </html>
