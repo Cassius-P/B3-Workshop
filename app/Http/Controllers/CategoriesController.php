@@ -20,7 +20,8 @@ class CategoriesController extends Controller{
                 'categories.id',
                 'categories.title',
                 'categories.description',
-                'categories.image'
+                'categories.image',
+                'categories.slug'
             )->first();
             $id=$category->id;
             $ideas= DB::table('categories_idea')->where('categories_idea.categories_id', '=', $id)->join('idees', 'categories_idea.ideas_id', '=', 'idees.id')->where('idees.statut', '=', "1")->leftJoin(
