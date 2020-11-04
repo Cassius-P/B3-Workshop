@@ -5,6 +5,7 @@ namespace App\Widgets;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
 use TCG\Voyager\Facades\Voyager;
+use TCG\Voyager\Widgets\BaseDimmer;
 
 class Validated extends BaseDimmer
 {
