@@ -19,9 +19,13 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
+
+Route::get('/idees', [App\Http\Controllers\IdeasController::class, 'getIdeas']);
+Route::get('/{x}', [App\Http\Controllers\CategoriesController::class, 'index']);
+Route::get('/{x}/{y}', [App\Http\Controllers\IdeaController::class, 'index']);
+
+Route::post('/xhr', [App\Http\Controllers\XHRController::class, 'newIdea']);
+

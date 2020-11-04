@@ -50,7 +50,7 @@ html {
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
-
+ 
 article,
 aside,
 figcaption,
@@ -571,6 +571,67 @@ pre code {
 .pre-scrollable {
   max-height: 340px;
   overflow-y: scroll;
+}
+.h-about{
+  margin-bottom: 5%;
+  
+}
+ 
+.separator {
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+.separator::before, .separator::after {
+  content: '';
+  flex: 1;
+  border-top: 3px dotted #eda27c;
+    border-top-width:5px;
+    border-right-width:0px;
+    border-bottom-width:0px;
+    border-left-width:0px;
+}
+.separator::before {
+  margin-right: .25em;
+}
+.separator::after {
+  margin-left: .25em;
+}
+.border-custom{
+  border: 3px #f0c300 !important;
+  border-style: dotted !important;
+  border-width: thick !important;
+}
+.like{
+  width: 32px;
+  height:32px;
+}
+.p-like{
+  margin-top: 3%;
+}
+#nb-like{
+  color:#01D758 ;
+}
+.like:hover{
+  width:30px;
+  height:30px;
+  transition: 250ms;
+}
+.liste-carte{
+  margin-top: 7%;
+}
+.carte{
+  margin-bottom: 8%;
+}
+.card-body{
+  box-shadow: 0px 6px 20px -5px rgba(0,0,0,0.75);
+}
+
+.container-titre{
+  margin-top:3%;
+  padding-top: 1%;
+  margin-bottom:3%;
+  border-radius:5px;
 }
 
 .container,
@@ -2432,6 +2493,20 @@ textarea.form-control.is-valid {
 .custom-file-input.is-valid:focus ~ .custom-file-label {
   border-color: #38c172;
   box-shadow: 0 0 0 0.2rem rgba(56, 193, 114, 0.25);
+}
+
+.b-shadow:hover {
+  box-shadow: 0px 6px 67px -5px rgba(0,0,0,0.75);
+}
+
+.b-shadow {
+  -webkit-box-shadow: 0px 6px 67px -13px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 6px 67px -13px rgba(0,0,0,0.75);
+}
+
+.gradient- {
+  background: rgb(34,193,195);
+  background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
 }
 
 .invalid-feedback {
@@ -7094,6 +7169,18 @@ button.bg-dark:focus {
   border-color: #3490dc !important;
 }
 
+.border-custom {
+  border: 3px #f0c300 !important;
+  border-style: dotted !important;
+  border-width: thick !important;
+}
+
+.border-custom-green {
+  border: 3px #01D758 !important;
+  border-style: dotted !important;
+  border-width: thick !important;
+}
+
 .border-secondary {
   border-color: #6c757d !important;
 }
@@ -10859,6 +10946,7 @@ a.text-dark:focus {
   body {
     min-width: 992px !important;
   }
+
 
   .container {
     min-width: 992px !important;
