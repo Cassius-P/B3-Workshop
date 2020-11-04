@@ -32,7 +32,7 @@ class Validated extends BaseDimmer
             'text'   => __('voyager::dimmer.ideas_text', ['count' => $count, 'string' => Str::lower($string)]),
             'button' => [
                 'text' => __('voyager::dimmer.ideas_link_text'),
-                'link' => route('voyager.ideas.index'),
+                'link' => route('voyager.idees.index'),
             ],
             'image' => voyager_asset('images/widget-backgrounds/02.jpg'),
         ]));
