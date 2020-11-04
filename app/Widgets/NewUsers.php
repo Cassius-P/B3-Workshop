@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
 use TCG\Voyager\Facades\Voyager;
 use TCG\Voyager\Widgets\BaseDimmer;
-use App\Models\Users;
+use App\Models\User;
 
 class NewUsers extends BaseDimmer
 {
@@ -24,7 +24,7 @@ class NewUsers extends BaseDimmer
      */
     public function run()
     {
-        $users = Users::select(
+        $users = User::select(
             'users.id',
             'users.created_at')->get();
 
