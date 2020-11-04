@@ -7,8 +7,8 @@
             @foreach($affichage as $cat)
                 <div class="card">
                     <div class="content active">
-                        <h1>{{$cat}}</h1>
-                        <p>{{$cat}} <i class="em em-coffee"></i></p>
+                        <h1>{{key($affichage)}}</h1>
+                        <p><i class="em em-coffee"></i></p>
                         <a class="button" href="#">Next step &rarr;</a>
                     </div>
                     <div class="content">
