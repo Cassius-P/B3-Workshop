@@ -20,7 +20,8 @@ class CategoriesController extends Controller{
                 'categories.id',
                 'categories.title',
                 'categories.description',
-                'categories.image'
+                'categories.image',
+                'categories.slug'
             )->first();
             $id=$category->id;
             $ideas= DB::table('categories_idea')->where('categories_idea.categories_id', '=', $id)->join('idees', 'categories_idea.ideas_id', '=', 'idees.id')->where('idees.statut', '=', "1")->leftJoin(
@@ -29,16 +30,14 @@ class CategoriesController extends Controller{
                 'idees.title',
                 'idees.description',
                 'idees.user_id',
-                'idees.category_id',
                 'idees.statut',
-                'idees.upvotes',
                 'users.name')->get();
 
             foreach($ideas as $idea){
                 $idea->vote = Votes::where('idea_id', '=', $idea->id)->count();
             }
 
-            return view('keita', ['ideas' => $ideas, 'category' => $category]);
+            return view('category', ['ideas' => $ideas, 'category' => $category]);
         }
     }
 

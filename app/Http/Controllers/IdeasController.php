@@ -24,9 +24,7 @@ class IdeasController extends Controller
                     'idees.title',
                     'idees.description',
                     'idees.user_id',
-                    'idees.category_id',
                     'idees.statut',
-                    'idees.upvotes',
                     'users.name')->get();
 
 
@@ -38,6 +36,6 @@ class IdeasController extends Controller
             $affichage[$title] = $ideas;
         }
 
-        return view('yann', [ 'affichage' => $affichage]);
+        return view('ideas', [ 'affichage' => $affichage]);
     }
 }
