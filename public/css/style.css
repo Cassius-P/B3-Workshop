@@ -94,3 +94,11 @@
 .btn-brown:hover {
     color: #01D758;
 }
+.vertical-scrollable> .row {
+    overflow-y: auto;
+    max-height: 36em;
+}
+
+.bg-ambre {
+    background-color: #F0C300 !important;
+}

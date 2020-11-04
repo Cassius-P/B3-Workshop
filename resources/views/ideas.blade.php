@@ -7,6 +7,7 @@
             <div class="mx-auto">
                 <h2 class="text-center pt-1 pb-3">Proposez votre idée :</h2>
                 <div class="border-custom p-4">
+                    {{json_encode($affichage)}}
                     <form method="POST" action="">
                         <div class="form-group">
                             <label for="title">Titre</label>
