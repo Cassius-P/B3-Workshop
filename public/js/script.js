@@ -44,4 +44,14 @@ $(document).ready(function(){
             inactive1.animate({height: '0', marginLeft:'0px', marginRight:'0px'}, 100);
         }
     });
+
+
+
+    var stackedCard = new stackedCards({
+        selector: '.stacked-cards',
+        layout: "slide",
+        transformOrigin: "center",
+    });
+
+    stackedCard.init();
 });
