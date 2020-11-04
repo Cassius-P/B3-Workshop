@@ -3,7 +3,7 @@ $(document).ready(function(){
         center: true,
         items:2,
         loop:true,
-        margin:20,
+        margin:80,
         responsive:{
             600:{
                 items:2
