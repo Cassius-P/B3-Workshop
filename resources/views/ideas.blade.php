@@ -23,7 +23,7 @@
                     <div class="content">
                         <h1>{{$cat[$i]->name}}</h1>
                         <p>{{$cat[$i]->title}}</p>
-                        <a class="button" href="#">Next step &rarr;</a>
+                        <a class="buttonCard" href="#">Next step &rarr;</a>
                     </div>
                     @endfor
                     <div class="progress-container">
