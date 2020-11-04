@@ -22,7 +22,6 @@ class IdeaController extends Controller
                 'idees.description',
                 'idees.user_id',
                 'idees.statut',
-                'idees.upvotes',
                 'categories.slug')->get();
 
             return view('idea', ['url' => $idee]); 
