@@ -23,8 +23,15 @@ class IdeaController extends Controller
                 'idees.user_id',
                 'idees.statut',
                 'categories.slug')->get();
-
-            return view('idea', ['url' => $idee]); 
+            
+                
+            if ($idee->statut == 0) {
+                abort(404);
+                return false;
+            }else{
+                return view('idea', ['url' => $idee]);
+            }
+             
         }
 
     }
