@@ -38,12 +38,20 @@ class NewUsers extends BaseDimmer
                 $count++;
             }
         }
-        $string = 'nouveaux utilisateurs';
+        $nouvel = "nouvel";
+        $utilisateur = "utilisateur";
+        $engagement = "s'est engagé";
+        if($count > 1 ){
+            $nouvel = "nouveaux";
+            $utilisateur += "s";
+            $engagement = "se sont engagés";
+        }
+        $string = "{$nouvel} {$utilisateur}";
 
         return view('voyager::dimmer', array_merge($this->config, [
             'icon'   => 'voyager-leaf',
             'title'  => "{$count} {$string}",
-            'text'   => "{$count} utilisateurs se sont engagés pour innover ensemble cette semaine",
+            'text'   => "{$count} {$utilisateur} {$engagement} pour innover ensemble cette semaine",
             'button' => [
                 'text' => 'Accéder aux utilisateurs',
                 'link' => route('voyager.users.index'),
