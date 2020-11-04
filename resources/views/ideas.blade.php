@@ -83,8 +83,58 @@
 
                     </div>
                 </div>
+                <div class="owl-carousel">
+                    @foreach($affichage as $cat)
+                        <div class="card">
+                            <div class="content active">
+                                <h1>{{$cat->title}}</h1>
+                                <p>{{$cat->description}} <i class="em em-coffee"></i></p>
+                                <a class="button" href="#">Next step &rarr;</a>
+                            </div>
+                            <div class="content">
+                                <h1>Step 2</h1>
+                                <p>Trip. Spill all over the place.</p>
+                                <a class="button" href="#">Next step &rarr;</a>
+                            </div>
+                            <div class="content">
+                                <h1>Step 3</h1>
+                                <p>Repeat.</p>
+                                <a class="button" href="#">Next step &rarr;</a>
+                            </div>
+                            <div class="progress-container">
+                                <div class="step"></div>
+                            </div>
+                        </div>
+                    @endforeach
+                    <div> Your Content </div>
+                    <div> Your Content </div>
+                    <div> Your Content </div>
+                    <div> Your Content </div>
+                    <div> Your Content </div>
+                    <div> Your Content </div>
+                    <div> Your Content </div>
+                </div>
+
+
             </div>
         </div>
     </div>
 </div>
+    <script>
+        $(document).ready(function(){
+            $(".owl-carousel").owlCarousel(
+                {
+                    center: true,
+                    items:1,
+                    loop:true,
+                    margin:10,
+                    responsive:{
+                        600:{
+                            items:1
+                        }
+                    }
+                }
+            );
+        });
+    </script>
 @endsection
