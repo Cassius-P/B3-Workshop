@@ -1,0 +1,34 @@
+{
+    "name": "connect",
+    "description": "This is my first hook.",
+    "require": {
+        "larapack/hooks": "^1.0.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Connect\\": "src/"
+        }
+    },
+    "extra": {
+        "hook": {
+            "providers": [
+                "Connect\\ConnectServiceProvider"
+            ],
+            "aliases": {
+                "Connect": "Connect\\ConnectFacade"
+            },
+            "migrations": [
+                "resources/database/migrations"
+            ],
+            "seeders": [
+                "resources/database/seeders"
+            ],
+            "unseeders": [
+                "resources/database/unseeders"
+            ],
+            "assets": {
+                "resources/assets": "public/vendor/connect"
+            }
+        }
+    }
+}

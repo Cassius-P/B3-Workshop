@@ -1,4 +1,5 @@
 <IfModule mod_rewrite.c>
+    SetEnv COMPOSER_HOME /.composer
     <IfModule mod_negotiation.c>
         Options -MultiViews -Indexes
     </IfModule>
