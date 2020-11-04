@@ -88,4 +88,21 @@
 </body>
 <script src="{{ asset('js/jquery.min.js') }}"></script>
 <script src="{{ asset('js/oc/owl.carousel.min.js') }}"></script>
+<script>
+    $(document).ready(function(){
+        $(".owl-carousel").owlCarousel(
+            {
+                center: true,
+                items:1,
+                loop:true,
+                margin:10,
+                responsive:{
+                    600:{
+                        items:1
+                    }
+                }
+            }
+        );
+    });
+</script>
 </html>
