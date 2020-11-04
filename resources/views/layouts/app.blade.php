@@ -86,8 +86,8 @@
         @endif
     </div>
 </body>
-<script src="{{ asset('js/jquery.min.js') }}"></script>
-<script src="{{ asset('js/oc/owl.carousel.min.js') }}"></script>
-<script src="{{ asset('js/script.js')}}"></script>
+<script src="{{ asset('js/jquery.min.js') }}" type="text/javascript"></script>
+<script src="{{ asset('js/oc/owl.carousel.min.js') }}" type="text/javascript"></script>
+<script src="{{ asset('js/script.js')}}" type="text/javascript"></script>
 
 </html>
