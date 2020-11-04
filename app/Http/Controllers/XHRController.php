@@ -49,6 +49,7 @@ class XHRController extends Controller{
                 ['idea_id' => $prop_id, 'user_id' => $user_id]
             );
             return 'ok';
+            
         } 
         catch(\Illuminate\Database\QueryException $e){ 
              return $e->getMessage(); 
