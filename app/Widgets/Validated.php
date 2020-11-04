@@ -24,7 +24,7 @@ class Validated extends BaseDimmer
      */
     public function run()
     {
-        $nonValidated = Ideas::where('statut', '=', 0)->select(
+        $nonValidated = Ideas::where('statut', '=', 1)->select(
             'idees.id',
             'idees.created_at',
             'idees.statut')->get();
@@ -39,12 +39,12 @@ class Validated extends BaseDimmer
                 $count++;
             }
         }
-        $string = 'idées non validées';
+        $string = 'idées validées';
 
         return view('voyager::dimmer', array_merge($this->config, [
             'icon'   => 'voyager-trash',
             'title'  => "{$count} {$string}",
-            'text'   => "{$count} idées n'ont pas été validées cette semaine",
+            'text'   => "{$count} idées ont été validées cette semaine",
             'button' => [
                 'text' => 'Accéder aux idées',
                 'link' => route('voyager.idees.index'),

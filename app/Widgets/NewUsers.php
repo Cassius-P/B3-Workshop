@@ -9,7 +9,7 @@ use TCG\Voyager\Facades\Voyager;
 use TCG\Voyager\Widgets\BaseDimmer;
 use App\Models\Users;
 
-class Validated extends BaseDimmer
+class NewUsers extends BaseDimmer
 {
     /**
      * The configuration array.
