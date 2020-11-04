@@ -19,7 +19,9 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
-    
+    <link href="{{ asset('css/oc/owl.carousel.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/oc/owl.theme.default.min.css') }}" rel="stylesheet">
+
 </head>
 <body>
     <div id="app">
@@ -84,4 +86,6 @@
         @endif
     </div>
 </body>
+<script src="{{ asset('js/jquery.min.js') }}"></script>
+<script src="{{ asset('js/oc/owl.carousel.min.js') }}"></script>
 </html>
