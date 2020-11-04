@@ -48,7 +48,7 @@ $(document).ready(function(){
 
 
     var stackedCard = new stackedCards({
-        selector: '.mycards',
+        selector: '.stacked-cards',
         layout: "slide",
         transformOrigin: "center",
     });
