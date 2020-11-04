@@ -43,7 +43,7 @@ class NewUsers extends BaseDimmer
         $engagement = "s'est engagé";
         if($count > 1 ){
             $nouvel = "nouveaux";
-            $utilisateur += "s";
+            $utilisateur .= "s";
             $engagement = "se sont engagés";
         }
         $string = "{$nouvel} {$utilisateur}";

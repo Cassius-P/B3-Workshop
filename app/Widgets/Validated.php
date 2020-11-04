@@ -43,8 +43,8 @@ class Validated extends BaseDimmer
         $validée ="validée";
         $avoir = "a";
         if($count > 1){
-            $idée +="s";
-            $validée+="s";
+            $idée .="s";
+            $validée .="s";
             $avoir = "ont";
         }
         $string = $idée.' '.$validée;
