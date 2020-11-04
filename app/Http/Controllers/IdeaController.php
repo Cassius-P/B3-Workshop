@@ -30,7 +30,9 @@ class IdeaController extends Controller
                 return false;
             }else{
                 $idee->vote = DB::table('votes')->where('idea_id', '=', $idea)->count();
-                $idee->user = DB::table('users')->where('users.id', '=', $idee->user_id)->select('users.name')->first();
+                $name = DB::table('users')->where('users.id', '=', $idee->user_id)->select('users.name')->first();
+                $idee->user = $name;
+                
                 return view('idea', ['url' => $idee]);
             }
              
