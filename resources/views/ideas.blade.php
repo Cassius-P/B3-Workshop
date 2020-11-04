@@ -4,10 +4,10 @@
 <div class="container w-75 p-3">
     <div class="row">
         <div id="owl-carousel">
-            @foreach($affichage as $cat)
+            @foreach($affichage as $key => $cat)
                 <div class="card">
                     <div class="content active">
-                        <h1>{{key($cat)}}</h1>
+                        <h1>{{$key}}</h1>
                         <p><i class="em em-coffee"></i></p>
                         <a class="button" href="#">Next step &rarr;</a>
                     </div>
