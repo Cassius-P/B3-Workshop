@@ -30,9 +30,7 @@ class CategoriesController extends Controller{
                 'idees.title',
                 'idees.description',
                 'idees.user_id',
-                'idees.category_id',
                 'idees.statut',
-                'idees.upvotes',
                 'users.name')->get();
 
             foreach($ideas as $idea){
