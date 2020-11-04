@@ -22,7 +22,7 @@ class Validated extends BaseDimmer
      */
     public function run()
     {
-        $count = Voyager::model('Post')->count();
+        $count = Voyager::model('Idees')->count();
         $string = trans_choice('voyager::dimmer.post', $count);
 
         return view('voyager::dimmer', array_merge($this->config, [
