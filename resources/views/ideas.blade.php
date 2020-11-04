@@ -13,19 +13,25 @@
     <div class="row">
         <div class="owl-carousel">
             @foreach($affichage as $key => $cat)
-                <div class="cardAn">
-                    <div class="content active">
-                        <h1>{{$key}}</h1>
-                        <p><i class="em em-coffee"></i></p>
-                        <a class="buttonCard" href="#">Next step &rarr;</a>
+                <div class="container">
+                    <div class="inner-container">
+                        <div class="card inactive-1"></div>
+                        <div class="card inactive-2"></div>
+                        <div class="cardAn">
+                            <div class="content active">
+                                <h1>{{$key}}</h1>
+                                <p><i class="em em-coffee"></i></p>
+                                <a class="buttonCard" href="#">Next step &rarr;</a>
+                            </div>
+                            @for($i = 0; $i < count($cat); $i++)
+                            <div class="content">
+                                <h1>{{$cat[$i]->name}}</h1>
+                                <p>{{$cat[$i]->title}}</p>
+                                <a class="buttonCard" href="#">Next step &rarr;</a>
+                            </div>
+                            @endfor
+                        </div>
                     </div>
-                    @for($i = 0; $i < count($cat); $i++)
-                    <div class="content">
-                        <h1>{{$cat[$i]->name}}</h1>
-                        <p>{{$cat[$i]->title}}</p>
-                        <a class="buttonCard" href="#">Next step &rarr;</a>
-                    </div>
-                    @endfor
                 </div>
             @endforeach
         </div>
