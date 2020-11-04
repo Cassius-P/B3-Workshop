@@ -38,10 +38,10 @@
         <div class="col-md-6">
             <div class="mx-auto">
                 <h2 class="text-center pt-1 pb-3">Liste des propositions déjà émises :</h2>
-                <div class="owl-carousel">
+                <div class="owl-carousel owl-theme">
                     @foreach($affichage as $key => $cat)
-                        <div class="vertical-scrollable">
-                            <div class="owl-item">
+                        <div class="vertical-scrollable item">
+
                                 <div class="row text-center">
                                     <!-- La card ci-dessous est celle à utiliser (pour en générer plusieurs), les autres servent simplement d'exemple pour le scrolling. -->
                                     <div class="card mb-3 w-100">
@@ -66,7 +66,6 @@
                                         </div>
                                     @endfor
                                 </div>
-                            </div>
 
                         </div>
                     @endforeach
