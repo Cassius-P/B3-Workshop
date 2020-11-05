@@ -30,10 +30,11 @@
                             <label for="description">Description</label>
                             <textarea class="form-control" id="c" placeholder="Décrivez-nous votre idée avec le plus de précision possible..." rows="12"></textarea>
                         </div>
+                        <div class="text-center">
+                            <button id="buttonIdea" class="btn btn-brown">Envoyer</button>
+                        </div>
                     </form>
-                    <div class="text-center">
-                        <button id="buttonIdea" class="btn btn-brown">Envoyer</button>
-                    </div>
+
                 </div>
             </div>
         </div>
