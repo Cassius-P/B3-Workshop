@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Models\Ideas;
 
 class HomeController extends Controller
 {
@@ -35,6 +36,7 @@ class HomeController extends Controller
     }
 
     private function getPosted($id){
-        //
+        $ideas = Ideas::where('idees.user_id', '=', $id)->select('idees.*')->get();
+        return $ideas;
     }
 }
