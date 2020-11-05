@@ -4,7 +4,7 @@
 <div class="container">
     <div class="rox justify-content-center">
         <div class="jumbotron my-5 bg-ambre" style="color:white;">
-            <h1 class="display-4" style="color:#f0c300">{{$category->title}}!</h1>
+            <h1 class="display-4" style="color:var(--light)">{{$category->title}}!</h1>
             <hr class="my-4" style="background-color:var(--light)">
             <p style="color:var(--light)">{{$category->description}}</p>
         </div>
