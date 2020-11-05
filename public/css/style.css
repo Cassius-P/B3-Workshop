@@ -99,3 +99,15 @@
 .bg-ambre {
     background-color: #F0C300 !important;
 }
+
+.more-details-cat {
+    position: fixed;
+    right: 1px;
+    top: 36px;
+    color: rgba(33, 148, 177, 0.466);
+}
+
+.more-details-description {
+    position: fixed;
+    right: 16px;
+}
