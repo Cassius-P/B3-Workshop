@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Models\Ideas;
 
 class HomeController extends Controller
 {
@@ -31,10 +32,20 @@ class HomeController extends Controller
     }
 
     private function getLikes($id){
-        //
+        $ideas= DB::table('users')->where('users.id', '=', $id)->Join(
+            'idees', 'idees.user_id', '=', 'users.id')->where('idees.statut', '=', "1")->select(
+            'idees.id',
+            'idees.title',
+            'idees.description',
+            'idees.user_id',
+            'idees.statut',
+            'users.name')->get();
+        
+            return $ideas;
     }
 
     private function getPosted($id){
-        //
+        $ideas = Ideas::where('idees.user_id', '=', $id)->select('idees.*')->get();
+        return $ideas;
     }
 }
