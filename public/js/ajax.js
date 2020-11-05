@@ -38,7 +38,7 @@ function sendLike(){
     var infos = {
         "module":"like",
         "user_id":user_id,
-        "id":prop_id
+        "prop_id":prop_id
     }
     sendPost(infos, button);
 }
