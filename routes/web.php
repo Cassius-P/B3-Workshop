@@ -31,9 +31,4 @@ Route::get('/{x}/{y}', [App\Http\Controllers\IdeaController::class, 'index'])->m
 Route::post('/xhr', [App\Http\Controllers\XHRController::class, 'newIdea']);
 
 
-Auth::routes();
-
-
-
-Auth::routes();
 
