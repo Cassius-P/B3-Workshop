@@ -26,7 +26,7 @@
                         <div class="card-header bg-ambre c-white" >{{$idea->title}}</div>
                         <div class="card-body">
                             <p class="card-text">{{$idea->description}}</p>
-                            <a href="{{$idea->id}}">En savoir plus</a>
+                            <a href="{{$category->slug}}/{{$idea->id}}">En savoir plus</a>
                         </div>
                     </div>
             @endforeach
