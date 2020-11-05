@@ -10,8 +10,8 @@
 <div class="container">
     <div class="row justify-content-center align-items-center tex pt-5 pb-0">
         <section>
-            <div class="text-center w-100 ">
-                <h1 class="bd-title c-white separator">Qui sommes-nous?</h1>
+            <div class="text-center col-lg-4 col-md-4 col-sm-12">
+                <h1 class="bd-title c-ambre separator">Qui sommes-nous?</h1>
             </div>
             <p class="text-center pt-3 pb-3">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet et blanditiis eum nam
@@ -27,67 +27,67 @@
             </p>
         </section>
 
-
-        <div>
-            <div class="text-center card-header bg-ambre w-100">
-                <h3 class="bd-title c-white">Comment utiliser Biosimul ?</h3>
+        <section>
+            <div>
+                <div class="text-center col-lg-4 col-md-4 col-sm-12">
+                    <h3 class="bd-title c-ambre separator">Comment utiliser Biosimul ?</h3>
+                </div>
+                <div class="p-3 stacked-cards">
+                    <ul>
+                        <li>
+                            <!-- <div class="col-xs-1 pb-2"> -->
+                            <div class="card shadow rounded" style="width: 18rem; height: 19rem; background-color: #eda27c;">
+                                <div class="card-body text-center">
+                                    <img class="pb-2" src={{ asset('/assets/icons/edit.png') }}>
+                                    <h5 class="card-title">Inscrivez-vous !</h5>
+                                    <p class="card-text">Créer un compte sur cette plateforme est gratuit, alors n'attendez plus pour
+                                        proposer votre idée!
+                                        <br><br>
+                                        Si vous souhaitez vous inscrire cliquez-ici:
+                                    </p>
+                                    <a href="{{ route('register') }}" class="btn btn-brown">S'inscrire</a>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- </div> -->
+                        </li>
+                        <li>
+                            <!-- <div class="col-xs-1 pb-2"> -->
+                            <div class="card shadow rounded" style="width: 18rem; height: 19rem; background-color: #f0c300;">
+                                <div class="card-body text-center">
+                                    <img class="pb-2" src={{ asset('/assets/icons/lightbulb.png') }}>
+                                    <h5 class="card-title">Proposez votre idée</h5>
+                                    <p class="card-text">Toutes les idées pour contribuer à l'amélioration de la ville sont les
+                                        bienvenues !
+                                        <br>
+                                        N'hésitez donc pas à proposer la vôtre !
+                                        <br><br>
+                                        <b>N'oubliez pas de vérifier que l'idée n'ait pas déjà été soumise auparavant.</b>
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- </div> -->
+                        </li>
+                        <li>
+                            <!-- <div class="col-xs-1"> -->
+                            <div class="card shadow rounded" style="width: 18rem; height: 19rem; background-color: #f79630">
+                                <div class="card-body text-center">
+                                    <img class="pb-2" src={{ asset('/assets/icons/sand-clock.png') }}>
+                                    <h5 class="card-title">Attendez la validation par un administrateur</h5>
+                                    <p class="card-text">Un administrateur analysera votre proposition afin de vérifier qu'elle soit
+                                        bien
+                                        conforme. <br> Dans le cas ou votre proposition se voit acceptée, elle apparaîtra ensuite dans
+                                        la
+                                        liste des propositions et pourra être votée.
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- </div> -->
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <div class="p-3 stacked-cards">
-                <ul>
-                    <li>
-                        <!-- <div class="col-xs-1 pb-2"> -->
-                        <div class="card shadow rounded" style="width: 18rem; height: 19rem; background-color: #eda27c;">
-                            <div class="card-body text-center">
-                                <img class="pb-2" src={{ asset('/assets/icons/edit.png') }}>
-                                <h5 class="card-title">Inscrivez-vous !</h5>
-                                <p class="card-text">Créer un compte sur cette plateforme est gratuit, alors n'attendez plus pour
-                                    proposer votre idée!
-                                    <br><br>
-                                    Si vous souhaitez vous inscrire cliquez-ici:
-                                </p>
-                                <a href="{{ route('register') }}" class="btn btn-brown">S'inscrire</a>
-                                </a>
-                            </div>
-                        </div>
-                        <!-- </div> -->
-                    </li>
-                    <li>
-                        <!-- <div class="col-xs-1 pb-2"> -->
-                        <div class="card shadow rounded" style="width: 18rem; height: 19rem; background-color: #f0c300;">
-                            <div class="card-body text-center">
-                                <img class="pb-2" src={{ asset('/assets/icons/lightbulb.png') }}>
-                                <h5 class="card-title">Proposez votre idée</h5>
-                                <p class="card-text">Toutes les idées pour contribuer à l'amélioration de la ville sont les
-                                    bienvenues !
-                                    <br>
-                                    N'hésitez donc pas à proposer la vôtre !
-                                    <br><br>
-                                    <b>N'oubliez pas de vérifier que l'idée n'ait pas déjà été soumise auparavant.</b>
-                                </p>
-                            </div>
-                        </div>
-                        <!-- </div> -->
-                    </li>
-                    <li>
-                        <!-- <div class="col-xs-1"> -->
-                        <div class="card shadow rounded" style="width: 18rem; height: 19rem; background-color: #f79630">
-                            <div class="card-body text-center">
-                                <img class="pb-2" src={{ asset('/assets/icons/sand-clock.png') }}>
-                                <h5 class="card-title">Attendez la validation par un administrateur</h5>
-                                <p class="card-text">Un administrateur analysera votre proposition afin de vérifier qu'elle soit
-                                    bien
-                                    conforme. <br> Dans le cas ou votre proposition se voit acceptée, elle apparaîtra ensuite dans
-                                    la
-                                    liste des propositions et pourra être votée.
-                                </p>
-                            </div>
-                        </div>
-                        <!-- </div> -->
-                    </li>
-                </ul>
-            </div>
-        </div>
-
+        </section>
 
     </div>
 </div>
