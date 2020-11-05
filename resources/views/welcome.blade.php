@@ -79,21 +79,7 @@
                     </div>
                 </div>
 
-        <div class="col-xs-1 pb-2">
-            <div class="card shadow rounded" style="width: 18rem; height: 19rem; background-color: #eda27c;">
-                <div class="card-body text-center">
-                    <img class="pb-2" src={{ asset('/assets/icons/edit.png') }}>
-                    <h5 class="card-title">Inscrivez-vous !</h5>
-                    <p class="card-text">Créer un compte sur cette plateforme est gratuit, alors n'attendez plus pour
-                        proposer votre idée!
-                        <br><br>
-                        Si vous souhaitez vous inscrire cliquez-ici:
-                    </p>
-                    <a href="{{ route('register') }}" class="btn btn-brown">S'inscrire</a>
-                    </a>
-                </div>
-            </div>
-        </div>
+
 
 
     </div>
