@@ -90,6 +90,7 @@
     <script type="text/javascript" src="{{ asset('js/oc/owl.carousel.js') }}" defer></script>
     <script type="text/javascript" src="{{ asset('js/stackedCards.min.js')}}" defer></script>
     <script type="text/javascript" src="{{ asset('js/script.js')}}" defer></script>
+    <script type="text/javascript" src="{{ asset('js/ajax.js')}}" defer></script>
 </body>
 
 
