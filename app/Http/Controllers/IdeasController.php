@@ -44,3 +44,4 @@ class IdeasController extends Controller
         }
     }
 }
+
