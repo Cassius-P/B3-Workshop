@@ -7,7 +7,7 @@
         <img src={{ asset('assets/banner.png') }} class="img-fluid" alt="banner">
     </div>
 </div>
-<div class="container mw-100 pt-5 pb-0">
+<div class="container row mw-100 pt-5 pb-0">
     <div class="text-center card-header bg-ambre">
         <h1 class="bd-title c-white">Qui sommes-nous?</h1>
     </div>
@@ -22,11 +22,8 @@
         doloribus amet blanditiis nam perferendis, minima recusandae, accusamus accusantium obcaecati officia? Sed iste
         quasi earum tenetur labore libero blanditiis repellendus?
     </p>
-</div>
 
 
-
-<div class="container pb-3 mw-100">
     <div class="text-center card-header bg-ambre">
         <h3 class="bd-title c-white">Comment utiliser Biosimul ?</h3>
     </div>
@@ -85,5 +82,8 @@
         </ul>
     </div>
 </div>
+
+
+
 
 @endsection
