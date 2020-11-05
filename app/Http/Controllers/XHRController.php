@@ -7,8 +7,9 @@ use Illuminate\Http\Request;
 class XHRController extends Controller{
 
     public function newIdea(Request $request){
-        $sent = $request->get('info');
+        $sent = json_decode($request->get('info'));
         if($sent){
+            $sent =
             $module = $sent->module;
             $message = "";
             if($module === 'idea'){
