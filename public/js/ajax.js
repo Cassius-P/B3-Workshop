@@ -8,7 +8,7 @@ function sendIdea(){
     var buttonForm = form.querySelector('button');
     var titre = form.querySelector('#titre');
     var desc = form.querySelector('#description');
-    var user_id = form.data('user');
+    var user_id = form.dataset.user;
 
     var infos = {
         "module":"idea",
