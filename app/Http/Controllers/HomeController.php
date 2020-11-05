@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Ideas;
+use App\Models\Votes;
 
 class HomeController extends Controller
 {
@@ -32,7 +33,7 @@ class HomeController extends Controller
     }
 
     private function getLikes($id){
-        $ideas= DB::table('votes')->where('votes.user_id', '=', $id)->join(
+        $ideas= Votes::where('votes.user_id', '=', $id)->join(
             'idees', 'votes.idea_id', '=', 'idees.id')->where('idees.statut', '=', "1")->select(
             'idees.id',
             'idees.title',
