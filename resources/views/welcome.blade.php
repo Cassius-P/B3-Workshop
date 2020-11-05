@@ -10,9 +10,7 @@
 <div class="container">
     <div class="row justify-content-center align-items-center tex pt-5 pb-0">
         <section class="text-center">
-            <div class="text-center col-lg-5 col-md-5 col-sm-12">
-                <h1 class="bd-title c-ambre separator text-center">Qui sommes-nous?</h1>
-            </div>
+            <h1 class="bd-title c-ambre separator text-center">Qui sommes-nous?</h1>
             <p class="text-center pt-3 pb-3">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet et blanditiis eum nam
                 odio. Magnam facilis
@@ -29,9 +27,7 @@
 
         <section>
             <div>
-                <div class="text-center col-lg-4 col-md-4 col-sm-12">
-                    <h3 class="bd-title c-ambre separator text-center">Comment utiliser Biosimul ?</h3>
-                </div>
+                <h3 class="bd-title c-ambre separator text-center">Comment utiliser Biosimul ?</h3>
                 <div class="p-3 stacked-cards">
                     <ul>
                         <li>
