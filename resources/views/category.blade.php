@@ -10,7 +10,7 @@
         </div>
 
         <div class="col-lg-10">
-            <div class="row liste-carte justify-content-between">
+            <div class="row liste-carte justify-content-around">
             @foreach($ideas as $idea)
                   {{--  <div class="col-md-6">
                         <div class="carte card mb-6">
@@ -23,7 +23,7 @@
                     </div>--}}
 
                     <div class="card bg-light mb-4 col-lg-3 col-md-3 col-sm-12" style="max-width: 18rem; max-height: 50vh">
-                        <div class="card-header bg-ambre c-white" >{{$idea->title}}</div>
+                        <div class="card-header bg-ambre c-white w-100" >{{$idea->title}}</div>
                         <div class="card-body">
                             <p class="card-text">{{$idea->description}}</p>
                             <a href="{{$category->slug}}/{{$idea->id}}">En savoir plus</a>
