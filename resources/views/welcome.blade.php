@@ -10,8 +10,8 @@
 <div class="container">
     <div class="row justify-content-center align-items-center tex pt-5 pb-0">
         <section>
-            <div class="text-center w-100">
-                <h1 class="bd-title c-white">Qui sommes-nous?</h1>
+            <div class="text-center w-100 ">
+                <h1 class="bd-title c-white separator">Qui sommes-nous?</h1>
             </div>
             <p class="text-center pt-3 pb-3">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet et blanditiis eum nam
