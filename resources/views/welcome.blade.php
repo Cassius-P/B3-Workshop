@@ -27,7 +27,8 @@
 
         <section>
             <h1 class="bd-title c-ambre separator text-center">Comment utiliser Biosimul ?</h1>
-            <div class="p-3 stacked-cards">
+            <h1 class="bd-title c-ambre separator text-center">Qui sommes-nous?</h1>
+            <div class="p-3 stacked-cards overflow-hidden">
                 <ul>
                     <li>
                         <!-- <div class="col-xs-1 pb-2"> -->
