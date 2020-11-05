@@ -9,7 +9,6 @@ function sendIdea(){
     var titre = form.querySelector('#titre');
     var desc = form.querySelector('#description');
     var user_id = form.dataset.user;
-    buttonForm.innerHTML="Yes";
     var infos = {
         "module":"idea",
         "titre":titre,
