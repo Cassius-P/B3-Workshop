@@ -12,7 +12,7 @@
         <div class="col-md-9">
             <div class="row liste-carte">
             @foreach($ideas as $idea)
-                    <div class="col-md-6">
+                  {{--  <div class="col-md-6">
                         <div class="carte card mb-6">
                             <div class="card-body">
                                 <h5 class="card-title">Titre</h5>
@@ -20,14 +20,13 @@
                                 <a href="" class="btn btn-outline-dark btn-sm">VOIR</a>
                             </div>
                         </div>
-                    </div>
+                    </div>--}}
 
-                    <div class="card bg-light mb-3" style="max-width: 18rem;">
-                        <div class="card-header bg-ambre">{{$idea->title}}</div>
+                    <div class="card bg-light mb-3" style="max-width: 18rem; max-height: 50vh">
+                        <div class="card-header bg-ambre" color="white">{{$idea->title}}</div>
                         <div class="card-body">
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <h5 class="card-title">Light card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <p class="card-text">{{$idea->description}}</p>
+                            <a href="{{$idea->id}}">En savoir plus</a>
                         </div>
                     </div>
             @endforeach
