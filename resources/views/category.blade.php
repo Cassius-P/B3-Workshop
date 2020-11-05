@@ -9,8 +9,8 @@
             <h5 style="color:var(--light)">{{$category->description}}</h5>
         </div>
 
-        <div class="col-md-9">
-            <div class="row liste-carte">
+        <div class="col-lg-9">
+            <div class="row liste-carte justify-content-between">
             @foreach($ideas as $idea)
                   {{--  <div class="col-md-6">
                         <div class="carte card mb-6">
