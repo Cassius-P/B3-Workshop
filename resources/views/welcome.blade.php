@@ -6,6 +6,10 @@
     <div class="row-brown justify-content-center">
         <img src={{ asset('assets/banner.png') }} class="img-fluid" alt="banner">
     </div>
+    <img src="{{ "assets/subbanner.svg" }}"
+         alt="un triangle aux trois côtés égaux"
+         height="87px"
+         style="width: 100%;">
 </div>
 <div class="container mw-100 pt-5 pb-0">
     <div class="text-center">

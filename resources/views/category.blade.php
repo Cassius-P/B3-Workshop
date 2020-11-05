@@ -22,7 +22,7 @@
                         </div>
                     </div>--}}
 
-                    <div class="card bg-light mb-4 col-lg-3 col-md-3 col-sm-12 px-0" style="max-width: 18rem; max-height: 50vh">
+                    <div class="card b-shadow bg-light mb-4 col-lg-3 col-md-3 col-sm-12 px-0" style="max-width: 18rem; max-height: 50vh">
                         <div class="card-header bg-ambre c-white w-100  " >{{$idea->title}}</div>
                         <div class="card-body">
                             <p class="card-text">{{$idea->description}}</p>
