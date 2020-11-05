@@ -42,7 +42,7 @@
         <div class="col-md-6">
             <div class="mx-auto h-100">
                 <h2 class="text-center pt-1 pb-3">Liste des propositions déjà émises :</h2>
-                {{$affichage}}
+                {{json_encode($affichage)}}
                 <div class="owl-carousel owl-theme h-100">
                     @foreach($affichage as $key => $cat)
                         <div class="vertical-scrollable h-100">
