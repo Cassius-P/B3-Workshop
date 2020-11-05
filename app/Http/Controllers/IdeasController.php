@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\DB;
 class IdeasController extends Controller
 {
     public function getIdeas(){
-        $categories = Categories::where('hidden', '=', false)->select('categories.*')->get();
+        $categories = Categories::where('hidden', '=', true)->select('categories.*')->get();
         $affichage = array();
         foreach ($categories as $category){
             $id=$category->id;
