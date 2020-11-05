@@ -8,8 +8,8 @@
     </div>
 </div>
 <div class="container mw-100 pt-5 pb-0">
-    <div class="text-center card-header">
-        <h1 class="separator bd-title">Qui sommes-nous?</h1>
+    <div class="text-center card-header bg-ambre">
+        <h1 class="bd-title c-white">Qui sommes-nous?</h1>
     </div>
     <p class="text-center pt-3 pb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet et blanditiis eum nam
         odio. Magnam facilis
@@ -27,8 +27,8 @@
 
 
 <div class="container pb-3 mw-100">
-    <div class="text-center">
-        <h3 class="separator">Comment utiliser Biosimul ?</h3>
+    <div class="text-center card-header bg-ambre">
+        <h3 class="bd-title c-white">Comment utiliser Biosimul ?</h3>
     </div>
     <div class="p-3 stacked-cards">
         <ul>
