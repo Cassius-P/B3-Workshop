@@ -2,14 +2,14 @@
 
 @section('content')
 <div class="container">
-    <div class="rox justify-content-center">
+    <div class="rox justify-content-center align-items-center">
         <div class="jumbotron my-5 bg-ambre" style="color:white;">
             <h1 class="display-4" style="color:var(--light)">{{$category->title}}</h1>
             <hr class="my-4" style="background-color:var(--light)">
             <h5 style="color:var(--light)">{{$category->description}}</h5>
         </div>
 
-        <div class="col-lg-12">
+        <div class="col-lg-10">
             <div class="row liste-carte justify-content-between">
             @foreach($ideas as $idea)
                   {{--  <div class="col-md-6">
