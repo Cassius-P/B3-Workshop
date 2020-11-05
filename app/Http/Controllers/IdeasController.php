@@ -7,12 +7,11 @@ use Illuminate\Http\Request;
 use App\Models\Ideas;
 use App\Models\Categories;
 use App\Models\CategoriesIdea;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
 class IdeasController extends Controller
 {
-
-
     public function getIdeas(){
         $categories = Categories::select('categories.*')->get();
         $affichage = array();
@@ -34,8 +33,14 @@ class IdeasController extends Controller
 
             $title = $category->title;
             $affichage[$title] = $ideas;
-        }
 
-        return view('ideas', [ 'affichage' => $affichage]);
+
+        }
+        if (Auth::check()){
+            $id = Auth::user()->id;
+            return view('ideas', [ 'affichage' => $affichage, 'id' => $id]);
+        }else{
+            return view('ideas', [ 'affichage' => $affichage]);
+        }
     }
 }

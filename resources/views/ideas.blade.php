@@ -17,8 +17,11 @@
             <div class="mx-auto">
                 <h2 class="text-center pt-1 pb-3">Proposez votre idée :</h2>
                 <div class="border-custom p-4">
-
-                    <form method="POST" action="">
+                    @if(isset($id))
+                    <form method="POST" action="" id="formIdea" data-user="{{$id}}">
+                    @else
+                    <form method="POST" action="" id="formIdea">
+                    @endif
                         <div class="form-group">
                             <label for="title">Titre</label>
                             <input type="text" class="form-control" id="title" placeholder="Titre">
@@ -27,10 +30,11 @@
                             <label for="description">Description</label>
                             <textarea class="form-control" id="c" placeholder="Décrivez-nous votre idée avec le plus de précision possible..." rows="12"></textarea>
                         </div>
+                        <div class="text-center">
+                            <button id="buttonIdea" class="btn btn-brown">Envoyer</button>
+                        </div>
                     </form>
-                    <div class="text-center">
-                        <button href="" class="btn btn-brown">Envoyer</button>
-                    </div>
+
                 </div>
             </div>
         </div>
@@ -38,6 +42,7 @@
         <div class="col-md-6">
             <div class="mx-auto h-100">
                 <h2 class="text-center pt-1 pb-3">Liste des propositions déjà émises :</h2>
+                {{json_encode($affichage)}}
                 <div class="owl-carousel owl-theme h-100">
                     @foreach($affichage as $key => $cat)
                         <div class="vertical-scrollable h-100">
