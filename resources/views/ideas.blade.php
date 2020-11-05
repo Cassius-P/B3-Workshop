@@ -53,6 +53,7 @@
                                         </div>
                                         <div class="col-xs-1 more-details-cat">
                                             <a href="/{{$key[0]->slug}}">Plus...</a>
+                                            {{$key[0]->slug}}
                                         </div>
                                     </div>
                                 </div>
