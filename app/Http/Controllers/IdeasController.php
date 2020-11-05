@@ -34,7 +34,8 @@ class IdeasController extends Controller
             }
 
             $title = $category->title;
-            $affichage[$title] = $ideas;
+            $affichage[$title][0] = $category->slug;
+            $affichage[$title][1] = $ideas;
 
 
         }

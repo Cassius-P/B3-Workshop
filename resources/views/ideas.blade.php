@@ -52,22 +52,21 @@
                                             <h5 style="padding-top: 6px;">{{$key}}</h5>
                                         </div>
                                         <div class="col-xs-1 more-details-cat">
-                                            <a href="/{{json_encode($key[0])->slug}}">Plus...</a>
-                                            {{json_encode($key[0])->slug}}
+                                            <a href="/{{$key[0]}}">Plus...</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <!------------------------------->
-                            @for($i = 0; $i < count($cat); $i++)
+                            @for($i = 0; $i < count($cat[1]); $i++)
                                 <div class="card mb-3 w-100">
                                     <h5 class="card-header">{{$cat[$i]->title}}</h5>
                                     <div class="card-body" style="padding-bottom: 30px;">
                                         <p class="card-text">
-                                            {{$cat[$i]->description}}
+                                            {{$cat[1][$i]->description}}
                                         </p>
                                         <div class="row more-details-description">
-                                            <a href="{{$cat[$i]->slug}}/{{$cat[$i]->id}}">Plus...</a>
+                                            <a href="{{$cat[1][$i]->slug}}/{{$cat[1][$i]->id}}">Plus...</a>
                                         </div>
                                     </div>
                                 </div>
