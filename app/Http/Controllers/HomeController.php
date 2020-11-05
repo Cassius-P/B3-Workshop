@@ -48,7 +48,10 @@ class HomeController extends Controller
     }
 
     private function getPosted($id){
-        $ideas = Ideas::where('idees.user_id', '=', $id)->select('idees.*')->get();
+        $ideas = Ideas::where('idees.user_id', '=', $id)->leftJoin('categories_idea', 'idees.id', '=', "categories_idea.ideas_id")->rightJoin('categories', 'categories_idea.categories_id', '=', 'categories.id')->select(
+            'idees.*',
+            'categories.slug',
+            'categories.title')->get();
         return $ideas;
     }
 }
