@@ -32,7 +32,16 @@ class HomeController extends Controller
     }
 
     private function getLikes($id){
-        //
+        $ideas= DB::table('votes')->where('votes.user_id', '=', $id)->join(
+            'idees', 'votes.idea_id', '=', 'idees.id')->where('idees.statut', '=', "1")->select(
+            'idees.id',
+            'idees.title',
+            'idees.description',
+            'idees.user_id',
+            'idees.statut'
+        )->get();
+
+        return $ideas;
     }
 
     private function getPosted($id){
