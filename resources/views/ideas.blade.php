@@ -66,7 +66,7 @@
                                             {{$cat[$i]->description}}
                                         </p>
                                         <div class="row more-details-description">
-                                            <a href="{{$key}}/{{$cat[$i]->id}}">Plus...</a>
+                                            <a href="{{$cat[$i]->slug}}/{{$cat[$i]->id}}">Plus...</a>
                                         </div>
                                     </div>
                                 </div>
