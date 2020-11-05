@@ -9,7 +9,7 @@
 </div>
 <div class="container">
     <div class="row justify-content-center align-items-center tex pt-5 pb-0">
-        <section class="text-center">
+        <section class="text-center d-flex flex-column justify-content-around" style="height: 50vh; ">
             <h1 class="bd-title c-ambre separator text-center">Qui sommes-nous?</h1>
             <p class="text-center pt-3 pb-3">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet et blanditiis eum nam
