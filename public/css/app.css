@@ -581,87 +581,7 @@ pre code {
   max-height: 340px;
   overflow-y: scroll;
 }
-.h-about{
-  margin-bottom: 5%;
-  
-}
- 
-.separator {
-  display: flex;
-  align-items: center;
-  text-align: center;
-}
-.separator::before, .separator::after {
-  content: '';
-  flex: 1;
-  border-top: 3px dotted #eda27c;
-    border-top-width:5px;
-    border-right-width:0px;
-    border-bottom-width:0px;
-    border-left-width:0px;
-}
-.separator::before {
-  margin-right: .25em;
-}
-.separator::after {
-  margin-left: .25em;
-}
-.border-custom{
-  border: 3px #f0c300 !important;
-  border-style: dotted !important;
-  border-width: thick !important;
-}
-.like{
-  width: 32px;
-  height:32px;
-}
-.p-like{
-  margin-top: 3%;
-}
-#nb-like{
-  color:#01D758 ;
-}
-.like:hover{
-  width:30px;
-  height:30px;
-  transition: 250ms;
-}
-.liste-carte{
-  margin-top: 7%;
-}
-.carte{
-  margin-bottom: 8%;
-}
-.card-body{
-  box-shadow: 0px 6px 20px -5px rgba(0,0,0,0.75);
-}
 
-.container-titre{
-  margin-top:3%;
-  padding-top: 1%;
-  margin-bottom:3%;
-  border-radius:5px;
-}
-
-<<<<<<< Updated upstream
-.carte{
-  margin-bottom: 8%;
-}
-
-.container-titre{
-  padding-top: 2%;
-  margin-bottom:3%;
-  border:1px solid black;
-  border-radius:5px;
-}
-
-#about{
-  margin-bottom:3%;
-=======
-#about{
-  margin-bottom:5%;
->>>>>>> Stashed changes
-}
 .container,
 .container-fluid,
 .container-xl,
@@ -716,13 +636,6 @@ pre code {
   margin-left: -15px;
 }
 
-.row-brown {
-  display: flex;
-  flex-wrap: wrap;
-  margin-right: -15px;
-  margin-left: -15px;
-  background-color: #473c38;
-}
 
 .no-gutters {
   margin-right: 0;

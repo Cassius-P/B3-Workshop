@@ -33,7 +33,7 @@
 }
 .stacked-cards li img {
     position: relative;
-    display: block;
+    display: inline;
     max-width: 100%;
     height: auto;
     z-index: 4;
