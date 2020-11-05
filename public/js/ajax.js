@@ -1,3 +1,8 @@
+var buttonId = document.querySelector('#buttonIdea');
+buttonId.addEventListener('click', event=>{
+    sendIdea();
+})
+
 function sendIdea(){
     var form = document.querySelector('#formIdea');
     var buttonForm = form.querySelector('button');
