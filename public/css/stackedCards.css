@@ -3,7 +3,7 @@
 }
 .stacked-cards ul {
     position: relative;
-    max-width: 350px;
+    max-width: 413px;
     margin: 0 auto;
     padding-left: 0;
 }
@@ -14,7 +14,6 @@
     border-radius: 8px;
     box-shadow: 0 3px 6px 0px #333;
     list-style: none;
-    width: 65%;
     position: absolute;
     left: 50%;
     transition: 0.5s ease transform;
@@ -33,7 +32,7 @@
 }
 .stacked-cards li img {
     position: relative;
-    display: block;
+    display: inline;
     max-width: 100%;
     height: auto;
     z-index: 4;
