@@ -98,7 +98,7 @@
 }
 
 .more-details-cat {
-    position: fixed;
+    position: absolute;
     right: 1px;
     top: 36px;
     color: rgba(33, 148, 177, 0.466);
