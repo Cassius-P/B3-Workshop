@@ -16,10 +16,10 @@
                 <h2 class="text-center pt-1 pb-3">Proposez votre idée :</h2>
                 <div class="border-custom p-4">
                     @if(isset($id))
-                    <form method="POST" action="" id="formIdea" data-user="{{$id}}">
-                        @else
+                        <form method="POST" action="" id="formIdea" data-user="{{$id}}">
+                    @else
                         <form method="POST" action="" id="formIdea">
-                            @endif
+                    @endif
                             <div class="form-group">
                                 <label for="title">Titre</label>
                                 <input type="text" class="form-control" id="title" placeholder="Titre">
@@ -43,7 +43,6 @@
                 <div class="owl-carousel owl-theme h-100">
                     @foreach($affichage as $key => $cat)
                     <div class="vertical-scrollable h-100">
-
                         <div class="row text-center">
                             <!-- La card ci-dessous est celle à utiliser (pour en générer plusieurs), les autres servent simplement d'exemple pour le scrolling. -->
                             <div class="card mb-3 w-100">
@@ -53,14 +52,13 @@
                                             <h5 style="padding-top: 6px;">{{$key}}</h5>
                                         </div>
                                         <div class="col-xs-1 more-details-cat">
-                                            <a href="/{{$key}}">plus...</a>
+                                            <a href="/{{$key}}">Plus...</a>
                                         </div>
                                     </div>
                                 </div>
-
                             </div>
                             <!------------------------------->
-                            @for($i = 0; $i < count($cat); $i++) 
+                            @for($i = 0; $i < count($cat); $i++)
                                 <div class="card mb-3 w-100">
                                     <h5 class="card-header">{{$cat[$i]->title}}</h5>
                                     <div class="card-body" style="padding-bottom: 30px;">
