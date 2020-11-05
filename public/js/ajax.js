@@ -30,7 +30,7 @@ function sendLike(){
         "user_id":user_id,
         "id":id
     }
-    sendPost(JSON.stringify(infos), button);
+    sendPost(infos, button);
 }
 
 function sendPost(infos, button){
@@ -49,7 +49,7 @@ function sendPost(infos, button){
         },
         data: {
             _token: $('meta[name="csrf-token"]').attr('content'),
-            info : infos
+            info : JSON.parse(infos)
         },
         success: function (Response) {
             retour = Response["message"];
