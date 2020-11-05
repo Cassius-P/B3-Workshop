@@ -22,6 +22,7 @@ Auth::routes();
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('/idees', [App\Http\Controllers\IdeasController::class, 'getIdeas'])->middleware('App\Http\Middleware\Authenticate');
 Route::get('/{x}', [App\Http\Controllers\CategoriesController::class, 'index'])->middleware('App\Http\Middleware\Authenticate');
@@ -32,8 +33,7 @@ Route::post('/xhr', [App\Http\Controllers\XHRController::class, 'newIdea']);
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
