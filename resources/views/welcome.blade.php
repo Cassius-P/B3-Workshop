@@ -2,18 +2,14 @@
 
 @section('content')
 
-<div class="container mw-100">
+<div class="container mw-100 b-shadow">
     <div class="row-brown justify-content-center">
         <img src={{ asset('assets/banner.png') }} class="img-fluid" alt="banner">
     </div>
-    <img src="{{ "assets/subbanner.svg" }}"
-         alt="un triangle aux trois côtés égaux"
-         height="87px"
-         style="width: 100%;">
 </div>
 <div class="container mw-100 pt-5 pb-0">
-    <div class="text-center">
-        <h3 class="separator">Qui sommes-nous?</h3>
+    <div class="text-center card-header">
+        <h1 class="separator bd-title">Qui sommes-nous?</h1>
     </div>
     <p class="text-center pt-3 pb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet et blanditiis eum nam
         odio. Magnam facilis
