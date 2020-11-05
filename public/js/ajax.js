@@ -1,13 +1,18 @@
 var buttonId = document.querySelector('#buttonIdea');
-buttonId.addEventListener('click', event=>{
-    sendIdea();
-})
+if(buttonId){
+    buttonId.addEventListener('click', event=>{
+        sendIdea();
+    })
+}
+
 
 var buttonId2 = document.querySelector('#buttonLike');
-buttonId2.addEventListener('click', event=>{
-    //sendLike();
-    console.log('la con de tt tes os');
-})
+if(buttonId2){
+    buttonId2.addEventListener('click', event=>{
+        sendLike();
+    })
+}
+
 
 function sendIdea(){
     var form = document.querySelector('#formIdea');
