@@ -34,12 +34,14 @@ class HomeController extends Controller
 
     private function getLikes($id){
         $ideas= Votes::where('votes.user_id', '=', $id)->join(
-            'idees', 'votes.idea_id', '=', 'idees.id')->where('idees.statut', '=', "1")->select(
+            'idees', 'votes.idea_id', '=', 'idees.id')->where('idees.statut', '=', "1")->leftJoin('categories_ideas', 'votes.idea_id', '=', "categories_idea.ideas_id")->rightJoin('categories', 'categories_idea.categories_id', '=', 'categories.id')->select(
             'idees.id',
             'idees.title',
             'idees.description',
             'idees.user_id',
-            'idees.statut'
+            'idees.statut',
+            'categories.slug',
+            'categories.title'
         )->get();
 
         return $ideas;
