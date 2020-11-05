@@ -37,3 +37,4 @@ class IdeasController extends Controller
         return view('ideas', [ 'affichage' => $affichage]);
     }
 }
+
