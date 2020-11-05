@@ -60,7 +60,7 @@
                             <!------------------------------->
                             @for($i = 0; $i < count($cat[1]); $i++)
                                 <div class="card mb-3 w-100">
-                                    <h5 class="card-header">{{$cat[$i]->title}}</h5>
+                                    <h5 class="card-header">{{$cat[1][$i]->title}}</h5>
                                     <div class="card-body" style="padding-bottom: 30px;">
                                         <p class="card-text">
                                             {{$cat[1][$i]->description}}
