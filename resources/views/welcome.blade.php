@@ -9,23 +9,27 @@
 </div>
 <div class="container">
     <div class="row justify-content-center align-items-center tex pt-5 pb-0">
-        <div class="text-center card-header bg-ambre">
-            <h1 class="bd-title c-white">Qui sommes-nous?</h1>
-        </div>
-        <p class="text-center pt-3 pb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet et blanditiis eum nam
-            odio. Magnam facilis
-            doloribus tempore ea sint quasi obcaecati! Ullam dolores deleniti, illum debitis officia nisi ea amet
-            accusamus, ipsam necessitatibus voluptates eos! Molestias laudantium vel, aspernatur soluta, ullam nesciunt
-            rem modi praesentium minima iure placeat ipsa autem beatae excepturi quaerat ipsam! Nam blanditiis quisquam
-            itaque architecto quidem delectus aspernatur. Modi tenetur facere delectus vitae necessitatibus voluptatibus
-            unde, magnam esse mollitia. Aliquam doloremque fugit laudantium quisquam iusto! Lorem ipsum dolor, sit amet
-            consectetur adipisicing elit. Unde distinctio qui pariatur quasi numquam quo iusto voluptatibus saepe error quis
-            doloribus amet blanditiis nam perferendis, minima recusandae, accusamus accusantium obcaecati officia? Sed iste
-            quasi earum tenetur labore libero blanditiis repellendus?
-        </p>
+        <section>
+            <div class="text-center w-100">
+                <h1 class="bd-title c-white">Qui sommes-nous?</h1>
+            </div>
+            <p class="text-center pt-3 pb-3">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet et blanditiis eum nam
+                odio. Magnam facilis
+                doloribus tempore ea sint quasi obcaecati! Ullam dolores deleniti, illum debitis officia nisi ea amet
+                accusamus, ipsam necessitatibus voluptates eos! Molestias laudantium vel, aspernatur soluta, ullam nesciunt
+                rem modi praesentium minima iure placeat ipsa autem beatae excepturi quaerat ipsam! Nam blanditiis quisquam
+                itaque architecto quidem delectus aspernatur. Modi tenetur facere delectus vitae necessitatibus voluptatibus
+                unde, magnam esse mollitia. Aliquam doloremque fugit laudantium quisquam iusto! Lorem ipsum dolor, sit amet
+                consectetur adipisicing elit. Unde distinctio qui pariatur quasi numquam quo iusto voluptatibus saepe error quis
+                doloribus amet blanditiis nam perferendis, minima recusandae, accusamus accusantium obcaecati officia? Sed iste
+                quasi earum tenetur labore libero blanditiis repellendus?
+            </p>
+        </section>
+
 
         <div>
-            <div class="text-center card-header bg-ambre">
+            <div class="text-center card-header bg-ambre w-100">
                 <h3 class="bd-title c-white">Comment utiliser Biosimul ?</h3>
             </div>
             <div class="p-3 stacked-cards">
