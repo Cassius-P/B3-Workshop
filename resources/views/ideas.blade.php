@@ -47,7 +47,7 @@
                             <!-- La card ci-dessous est celle à utiliser (pour en générer plusieurs), les autres servent simplement d'exemple pour le scrolling. -->
                             <div class="card mb-3 w-100">
                                 <div class="card-header bg-ambre">
-                                    <div class="row justify-content-center">
+                                    <div class="row justify-content-center " style="color:white;">
                                         <div class="col-xs-1">
                                             <h5 style="padding-top: 6px;">{{$key}}</h5>
                                         </div>
@@ -66,7 +66,7 @@
                                             {{$cat[$i]->description}}
                                         </p>
                                         <div class="row more-details-description">
-                                            <a href="{{$key}}/{{$cat[$i]->id}}">plus...</a>
+                                            <a href="{{$key}}/{{$cat[$i]->id}}">Plus...</a>
                                         </div>
                                     </div>
                                 </div>
