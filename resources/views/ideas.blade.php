@@ -52,8 +52,8 @@
                                             <h5 style="padding-top: 6px;">{{$key}}</h5>
                                         </div>
                                         <div class="col-xs-1 more-details-cat">
-                                            <a href="/{{$key[0]->slug}}">Plus...</a>
-                                            {{$key[0]->slug}}
+                                            <a href="/{{json_encode($key[0])->slug}}">Plus...</a>
+                                            {{json_encode($key[0])->slug}}
                                         </div>
                                     </div>
                                 </div>
