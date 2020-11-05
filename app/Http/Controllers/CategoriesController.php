@@ -35,6 +35,14 @@ class CategoriesController extends Controller{
 
             foreach($ideas as $idea){
                 $idea->vote = Votes::where('idea_id', '=', $idea->id)->count();
+                $max_length = 150;
+
+                if (strlen($idea->description) > $max_length)
+                {
+                    $offset = ($max_length - 3) - strlen($idea->description);
+                    $s = substr($idea->description, 0, strrpos($idea->description, ' ', $offset)) . '...';
+                    $idea->description = $s;
+                }
             }
 
             return view('category', ['ideas' => $ideas, 'category' => $category]);
