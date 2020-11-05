@@ -23,7 +23,7 @@
                     </div>--}}
 
                     <div class="card bg-light mb-3" style="max-width: 18rem; max-height: 50vh">
-                        <div class="card-header bg-ambre" color="white">{{$idea->title}}</div>
+                        <div class="card-header bg-ambre c-white" >{{$idea->title}}</div>
                         <div class="card-body">
                             <p class="card-text">{{$idea->description}}</p>
                             <a href="{{$idea->id}}">En savoir plus</a>
