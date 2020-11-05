@@ -1,7 +1,18 @@
 var buttonId = document.querySelector('#buttonIdea');
-buttonId.addEventListener('click', event=>{
-    sendIdea();
-})
+if(buttonId){
+    buttonId.addEventListener('click', event=>{
+        sendIdea();
+    })
+}
+
+
+var buttonId2 = document.querySelector('#buttonLike');
+if(buttonId2){
+    buttonId2.addEventListener('click', event=>{
+        sendLike();
+    })
+}
+
 
 function sendIdea(){
     var form = document.querySelector('#formIdea');
@@ -20,14 +31,14 @@ function sendIdea(){
 }
 
 function sendLike(){
-    var button = document.querySelector('#like');
-    var user_id = button.data('user_id');
-    var prop_id = button.data('id');
+    var button = document.querySelector('#buttonLike');
+    var user_id = button.dataset.user;
+    var prop_id = button.dataset.idea;
 
     var infos = {
         "module":"like",
         "user_id":user_id,
-        "id":id
+        "prop_id":prop_id
     }
     sendPost(infos, button);
 }
