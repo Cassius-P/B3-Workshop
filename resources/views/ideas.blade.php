@@ -9,7 +9,7 @@
 @endsection
 
 @section('content')
-<div class="container w-75 p-3">
+<div class="container col-lg-9 col-md-9 col-sm-12 pt-3">
     <div class="row">
         <div class="col-md-6 pb-2">
             <div class="mx-auto">
