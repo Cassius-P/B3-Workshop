@@ -5,7 +5,8 @@ buttonId.addEventListener('click', event=>{
 
 var buttonId2 = document.querySelector('#buttonLike');
 buttonId2.addEventListener('click', event=>{
-    sendLike();
+    //sendLike();
+    console.log('la con de tt tes os');
 })
 
 function sendIdea(){
