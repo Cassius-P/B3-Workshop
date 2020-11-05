@@ -44,6 +44,9 @@
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="/idees">Idées</a>
+                        </li>
                         @guest
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('login') }}">{{ __('Se connecter') }}</a>
@@ -90,6 +93,7 @@
     <script type="text/javascript" src="{{ asset('js/oc/owl.carousel.js') }}" defer></script>
     <script type="text/javascript" src="{{ asset('js/stackedCards.min.js')}}" defer></script>
     <script type="text/javascript" src="{{ asset('js/script.js')}}" defer></script>
+    <script type="text/javascript" src="{{ asset('js/ajax.js')}}" defer></script>
 </body>
 
 

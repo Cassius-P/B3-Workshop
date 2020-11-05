@@ -1,10 +1,14 @@
+var buttonId = document.querySelector('#buttonIdea');
+buttonId.addEventListener('click', event=>{
+    sendIdea();
+})
+
 function sendIdea(){
     var form = document.querySelector('#formIdea');
-    var buttonForm = form.querySelector('button');
+    var buttonForm = form.querySelector('#buttonIdea');
     var titre = form.querySelector('#titre');
     var desc = form.querySelector('#description');
-    var user_id = form.data('user_id');
-
+    var user_id = form.dataset.user;
     var infos = {
         "module":"idea",
         "titre":titre,
@@ -28,9 +32,9 @@ function sendLike(){
     sendPost(infos, button);
 }
 
-function sendPost(infos, elmt){
+function sendPost(infos, button){
     var route = "/xhr";
-    elmt.disabled=true;
+    button.disabled=true;
 
     $.ajax({
         type: "POST",
@@ -49,7 +53,7 @@ function sendPost(infos, elmt){
         success: function (Response) {
             retour = Response["message"];
             console.log(retour);
-            elmt.disabled=false;
+            button.disabled=false;
         }
     });
 }

@@ -3,11 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class XHRController extends Controller{
 
     public function newIdea(Request $request){
-        $sent = json_decode($request->get('info'));
+        $sent = json_encode($request->get('info'));
+        $sent = json_decode($sent);
         if($sent){
             $module = $sent->module;
             $message = "";
