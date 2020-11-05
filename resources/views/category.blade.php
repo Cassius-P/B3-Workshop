@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container">
-    <div class="rox justify-content-center align-items-center">
+    <div class="rox justify-content-center align-items-center tex">
         <div class="jumbotron my-5 bg-ambre" style="color:white;">
             <h1 class="display-4" style="color:var(--light)">{{$category->title}}</h1>
             <hr class="my-4" style="background-color:var(--light)">
@@ -22,7 +22,7 @@
                         </div>
                     </div>--}}
 
-                    <div class="card bg-light mb-3" style="max-width: 18rem; max-height: 50vh">
+                    <div class="card bg-light mb-4 col-lg-3 col-md-3 col-sm-12" style="max-width: 18rem; max-height: 50vh">
                         <div class="card-header bg-ambre c-white" >{{$idea->title}}</div>
                         <div class="card-body">
                             <p class="card-text">{{$idea->description}}</p>
