@@ -49,7 +49,7 @@ function sendPost(infos, button){
         },
         data: {
             _token: $('meta[name="csrf-token"]').attr('content'),
-            info : JSON.parse(infos)
+            info : infos
         },
         success: function (Response) {
             retour = Response["message"];
