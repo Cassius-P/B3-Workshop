@@ -11,7 +11,7 @@ use Illuminate\Http\Request;
 class IdeaController extends Controller
 {
     public function index($category, $idea){
-        $cat = Categories::where('slug', '=', $category)->where('hidden', '=', 0)->first();
+        $cat = Categories::where('slug', '=', $category)->where('hidden', '=', false)->first();
         if($cat == null){
             abort(404);
             return false;
