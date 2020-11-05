@@ -18,7 +18,7 @@
                 <h2 class="text-center pt-1 pb-3">Proposez votre idée :</h2>
                 <div class="border-custom p-4">
 
-                    <form method="POST" action="">
+                    <form method="POST" action="" id="formIdea">
                         <div class="form-group">
                             <label for="title">Titre</label>
                             <input type="text" class="form-control" id="title" placeholder="Titre">
