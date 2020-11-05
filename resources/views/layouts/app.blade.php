@@ -17,9 +17,12 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
-    
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('css/oc/owl.carousel.min.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('css/oc/owl.theme.default.min.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('css/stackedCards.css') }}" rel="stylesheet" type="text/css">
+    @yield('extraTop')
 </head>
 <body>
     <div id="app">
@@ -83,5 +86,13 @@
             </main>
         @endif
     </div>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" defer></script>
+    <script type="text/javascript" src="{{ asset('js/oc/owl.carousel.js') }}" defer></script>
+    <script type="text/javascript" src="{{ asset('js/stackedCards.min.js')}}" defer></script>
+    <script type="text/javascript" src="{{ asset('js/script.js')}}" defer></script>
 </body>
+
+
+{{--<script type="text/javascript" src="{{ asset('js/card.js') }}"></script>--}}
+@yield('extraBottom')
 </html>
