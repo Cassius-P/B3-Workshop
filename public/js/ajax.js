@@ -30,7 +30,7 @@ function sendLike(){
         "user_id":user_id,
         "id":id
     }
-    sendPost(infos, button);
+    sendPost(JSON.stringify(infos), button);
 }
 
 function sendPost(infos, button){

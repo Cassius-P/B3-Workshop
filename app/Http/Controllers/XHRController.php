@@ -9,7 +9,6 @@ class XHRController extends Controller{
     public function newIdea(Request $request){
         $sent = json_decode($request->get('info'));
         if($sent){
-            $sent =
             $module = $sent->module;
             $message = "";
             if($module === 'idea'){
