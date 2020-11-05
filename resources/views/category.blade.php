@@ -32,6 +32,9 @@
             @endforeach
 
             </div>
+            <div class="d-flex col-12 justify-content-center">
+                {{ $ideas->links() }}
+            </div>
         </div>
     </div>
 </div>
