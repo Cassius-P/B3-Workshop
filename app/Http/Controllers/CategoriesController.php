@@ -31,7 +31,7 @@ class CategoriesController extends Controller{
                 'idees.description',
                 'idees.user_id',
                 'idees.statut',
-                'users.name')->simplePaginate(2);
+                'users.name')->simplePaginate(12);
 
             foreach($ideas as $idea){
                 $idea->vote = Votes::where('idea_id', '=', $idea->id)->count();
