@@ -31,8 +31,7 @@
         <h3 class="separator">Comment utiliser Biosimul ?</h3>
     </div>
     <div class="row justify-content-around p-3 stacked-cards">
-        {{--<ul>
-            <li>
+
                 <div class="col-xs-1 pb-2">
                     <div class="card shadow rounded" style="width: 18rem; height: 19rem; background-color: #eda27c;">
                         <div class="card-body text-center">
@@ -48,8 +47,7 @@
                         </div>
                     </div>
                 </div>
-            </li>
-            <li>
+
                 <div class="col-xs-1 pb-2">
                     <div class="card shadow rounded" style="width: 18rem; height: 19rem; background-color: #f0c300;">
                         <div class="card-body text-center">
@@ -65,8 +63,7 @@
                         </div>
                     </div>
                 </div>
-            </li>
-            <li>
+
                 <div class="col-xs-1">
                     <div class="card shadow rounded" style="width: 18rem; height: 19rem; background-color: #f79630">
                         <div class="card-body text-center">
@@ -81,9 +78,8 @@
                         </div>
                     </div>
                 </div>
-            </li>
-        </ul>--}}
-        {{--<div class="col-xs-1 pb-2">
+
+        <div class="col-xs-1 pb-2">
             <div class="card shadow rounded" style="width: 18rem; height: 19rem; background-color: #eda27c;">
                 <div class="card-body text-center">
                     <img class="pb-2" src={{ asset('/assets/icons/edit.png') }}>
@@ -97,13 +93,8 @@
                     </a>
                 </div>
             </div>
-        </div>--}}
+        </div>
 
-    <ul>
-        <li>Test</li>
-        <li>yee</li>
-        <li>CTALLDS</li>
-    </ul>
 
     </div>
 </div>
