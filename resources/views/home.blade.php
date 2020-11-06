@@ -7,7 +7,7 @@
         <h1 class="list-group-item active col-sm-10 col-lg-12 col-md-10 b-shadow2">Vos idées :</h1>
         <div class="row container d-flex flex-wrap justify-content-between mt-2 mb-5">
 
-            {{json_encode($post)}}
+            {{json_encode($posted)}}
             {{json_encode($liked)}}
 
             @if(\PHPUnit\Framework\isEmpty($posted))
