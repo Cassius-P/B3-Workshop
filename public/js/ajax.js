@@ -75,7 +75,7 @@ function sendPost(infos, button){
 
 function changeLikes(){
     var likesNumber = document.querySelector('#likesNumber');
-    var number = likesNumber.innerHTML;
+    var number = parseInt(likesNumber.innerHTML);
     likesNumber.innerHTML = number+1;
 }
 
