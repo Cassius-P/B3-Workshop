@@ -25,6 +25,14 @@
     @yield('extraTop')
 </head>
 <body>
+<?php
+    $categories = \App\Models\Categories::where('hidden', '=', true)->select(
+        'categories.title',
+        'categories.slug'
+    )->gets
+
+
+?>
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
@@ -47,6 +55,26 @@
                         <li class="nav-item">
                             <a class="nav-link" href="/idees">Idées</a>
                         </li>
+                        <li class="nav-item dropdown">
+                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                Catégories
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                @if($categories == null)
+                                    <a class="dropdown-item" href=""
+                                       onclick="event.preventDefault();">
+                                        Pas de catégories
+                                    </a>
+                                @else
+                                    @foreach($categories as $category)
+                                        <a class="dropdown-item" href="/{{$category->slug}}">
+                                            {{$category->title}}
+                                        </a>
+                                    @endforeach
+                                @endif
+                            </div>
+
+                        </li>
                         @guest
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('login') }}">{{ __('Se connecter') }}</a>
@@ -58,7 +86,7 @@
                             @endif
                         @else
                             <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre onclick="event.preventDefault();">
                                     {{ Auth::user()->name }}
                                 </a>
 
