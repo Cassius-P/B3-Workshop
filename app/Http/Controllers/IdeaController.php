@@ -37,7 +37,7 @@ class IdeaController extends Controller
 
                 $liked = false;
                 if(Auth::check()){
-                    $vote = Votes::where([['idea_id', '=', $idee->id ], ['user_id', '=', Auth::user()->id]]);
+                    $vote = Votes::where([['idea_id', '=', $idee->id ], ['user_id', '=', Auth::user()->id]])->first();
                     if($vote != null){
                         $liked = true;
                     }
