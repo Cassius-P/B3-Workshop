@@ -62,8 +62,8 @@ function sendPost(infos, button){
             info : infos
         },
         success: function (Response) {
-            retour = Response["message"];
-            console.log(retour);
+            var retour = Response["message"];
+            console.log(infos.module);
             if(infos.module != "like"){
                 button.disabled=false;
             }else{
