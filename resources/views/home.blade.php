@@ -10,7 +10,7 @@
             {{--{{json_encode($posted)}}
             {{json_encode($liked)}}--}}
 
-            @if(empty($posted))
+            @if($posted->isEmpty())
                 <h5>Vous n'avez pas proposé d'idées pour le moment</h5>
             @else
                 @foreach($posted as $post)
@@ -30,7 +30,7 @@
         </div>
         <h1 class="list-group-item active col-sm-10 col-lg-12 col-md-10 b-shadow2">Vos likes :</h1>
         <div class="row container d-flex flex-wrap justify-content-between mt-2 mb-5">
-            @if(empty($liked))
+            @if($liked->isEmpty())
                 <h5>Vous n'avez pas proposé d'idées pour le moment</h5>
             @else
                 @foreach($liked as $like)
