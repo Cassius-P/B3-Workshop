@@ -36,14 +36,16 @@ class IdeaController extends Controller
                 $idee->user = $name->name;
 
                 $liked = false;
+                $user_id = 0;
                 if(Auth::check()){
-                    $vote = Votes::where([['idea_id', '=', $idee->id ], ['user_id', '=', Auth::user()->id]])->first();
+                    $user_id = Auth::user()->id;
+                    $vote = Votes::where([['idea_id', '=', $idee->id ], ['user_id', '=', $user_id]])->first();
                     if($vote != null){
                         $liked = true;
                     }
                 }
 
-                return view('idea', ['idee' => $idee, 'liked' => $liked]);
+                return view('idea', ['idee' => $idee, 'liked' => $liked, 'user_id' => $user_id]);
             }
 
         }
