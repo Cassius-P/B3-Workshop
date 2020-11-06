@@ -29,7 +29,7 @@
     $categories = \App\Models\Categories::where('hidden', '=', true)->select(
         'categories.title',
         'categories.slug'
-    )->gets
+    )->get();
 
 
 ?>
