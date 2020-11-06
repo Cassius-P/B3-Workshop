@@ -18,7 +18,7 @@
                     <div class="card-footer bg-transparent border-marron d-flex justify-content-around align-items-center text-align-center">
                         <span style="color:white">{{$idee->vote}}<span>&nbsp;likes</span></span>
                         @if($liked == false)
-                            <button id="buttonLike" type="button" data-idea="{{$idee->id}}" data-user="{{$idee->user_id}}" class="btn bg-ambre btn-success border-ambre" style="color:white">
+                            <button id="buttonLike" type="button" data-idea="{{$idee->id}}" data-user="{{$user_id}}" class="btn bg-ambre btn-success border-ambre" style="color:white">
                                 <span class="btn-label"><i class="fa fa-heart" aria-hidden="true"></i></span>J'aime !
                             </button>
                         @else
