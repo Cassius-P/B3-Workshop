@@ -25,9 +25,12 @@
                     <div class="card-header bg-ambre b-hover text-center">
                         <h5 class="card-title c-white">{{$post->title}}</h5>
                     </div>
-                    <div class="card-body">
+                    <div class="card-body pb-3">
                         <p class="card-text" style="color:#473c38" >{{$post->description}}</p>
-                    </div>  
+                        <div class="row more-details-description">
+                            <a href="immobilier/1">Plus...</a>
+                        </div>
+                    </div>
                 </div>
             @endforeach
         </div>
@@ -40,7 +43,7 @@
                     </div>
                     <div class="card-body">
                         <p class="card-text" style="color:#473c38" >{{$like->description}}</p>
-                    </div>  
+                    </div>
                 </div>
             @endforeach
         </div>
