@@ -25,7 +25,6 @@ class IdeasController extends Controller
                     'idees.user_id',
                     'idees.statut',
                     'categories.slug',
-                    'categories.title',
                     'users.name')->limit(9)->get();
 
 
