@@ -52,7 +52,7 @@ class XHRController extends Controller{
             DB::table('votes')->insertGetId(
                 ['idea_id' => $prop_id, 'user_id' => $user_id]
             );
-            return 'ok';
+            return $prop_id.'ok'.$user_id;
 
 
         }
