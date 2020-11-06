@@ -16,7 +16,7 @@
                         <p class="card-text" style="color:white">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                     </div>
                     <div class="card-footer bg-transparent border-marron d-flex justify-content-around align-items-center text-align-center">
-                        <span style="color:white">{{$idee->vote}}<span>&nbsp;likes</span></span>
+                        <span style="color:white" ><span id="likesNumber">{{$idee->vote}}</span><span>&nbsp;likes</span></span>
                         @if($liked == false)
                             <button id="buttonLike" type="button" data-idea="{{$idee->id}}" data-user="{{$user_id}}" class="btn bg-ambre btn-success border-ambre" style="color:white">
                                 <span class="btn-label"><i class="fa fa-heart" aria-hidden="true"></i></span>J'aime !

@@ -64,8 +64,18 @@ function sendPost(infos, button){
         success: function (Response) {
             retour = Response["message"];
             console.log(retour);
-            button.disabled=false;
+            if(infos.module != "like"){
+                button.disabled=false;
+            }else{
+                changeLikes()
+            }
         }
     });
+}
+
+function changeLikes(){
+    var likesNumber = document.querySelector('#likesNumber');
+    var number = likesNumber.innerHTML;
+    likesNumber.innerHTML = number+1;
 }
 
