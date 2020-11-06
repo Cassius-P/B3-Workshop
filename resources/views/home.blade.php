@@ -1,21 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
 
-                <div class="card-body">
-                    {{json_encode($posted)}}
-                    <br>
-                    {{json_encode($liked)}}
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 <div class="container">
     <div class="row justify-content-center  my-5">
         <h1 class="list-group-item active col-sm-10 col-lg-12 col-md-10 b-shadow2">Vos idées :</h1>
@@ -28,7 +14,7 @@
                     <div class="card-body pb-3">
                         <p class="card-text" style="color:#473c38" >{{$post->description}}</p>
                         <div class="row more-details-description">
-                            <a href="immobilier/1">Plus...</a>
+                            <a href="{{$post->slug}}/{{$post->id}}">Plus...</a>
                         </div>
                     </div>
                 </div>
@@ -43,6 +29,9 @@
                     </div>
                     <div class="card-body">
                         <p class="card-text" style="color:#473c38" >{{$like->description}}</p>
+                        <div class="row more-details-description">
+                            <a href="{{$like->slug}}/{{$like->id}}">Plus...</a>
+                        </div>
                     </div>
                 </div>
             @endforeach

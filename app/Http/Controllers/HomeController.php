@@ -41,7 +41,7 @@ class HomeController extends Controller
             'idees.user_id',
             'idees.statut',
             'categories.slug',
-            'categories.title'
+            'categories.title as c_title'
         )->get();
 
         return $ideas;
@@ -51,7 +51,7 @@ class HomeController extends Controller
         $ideas = Ideas::where('idees.user_id', '=', $id)->leftJoin('categories_idea', 'idees.id', '=', "categories_idea.ideas_id")->rightJoin('categories', 'categories_idea.categories_id', '=', 'categories.id')->select(
             'idees.*',
             'categories.slug',
-            'categories.title')->get();
+            'categories.title as c_title')->get();
         return $ideas;
     }
 }
